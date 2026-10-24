@@ -1,81 +1,125 @@
+import Link from 'next/link';
+import PageBanner from '../../../components/PageBanner';
+
 export const metadata = {
-    title: 'تغليف الأثاث الاحترافي',
+    title: 'تغليف الأثاث الاحترافي | الدكتور لنقل الأثاث',
+    description: 'خدمات تغليف عفش وأثاث منزلي بالبابل راب، الكراتين المقواة، والبطاطين السميكة لحماية غرف النوم والزجاج والأجهزة الكهربائية.',
 };
 
 export default function ProPackingService() {
     return (
-        <div className="container">
-            <section className="surface-card mb-5">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <span className="tag-pill mb-3"><i className="fa-solid fa-box-open"></i><span>خدمة المارد</span></span>
-                        <h1 className="section-title" style={{ fontSize: "2rem" }}>تغليف متعدد الطبقات يحافظ على كل قطعة كما هي</h1>
-                        <p className="lead-text" style={{ fontSize: "1.05rem" }}>نعتمد منهجية تغليف تبدأ بالمعاينة، يليها تفكيك دقيق، ثم تغليف مخصص لكل قطعة باستخدام مواد مضادة للصدمات والرطوبة.</p>
-                        <ul className="list-unstyled mt-4" style={{ color: "var(--neutral-700)" }}>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> بطاطين مبطنة للأثاث الخشبي، وبابل راب للأجهزة والتحف الزجاجية.</li>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> ترقيم وتحزيم لكل قطعة بملصقات واضحة لتسهيل التركيب لاحقاً.</li>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> فريق نجارة متخصص في فك المطابخ، غرف النوم، وغرف الأطفال بعناية.</li>
-                        </ul>
-                        <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill">احجز معاينة مجانية</a>
-                    </div>
-                    <div className="col-lg-6">
-                        <img src="/images/ka.jpg" alt="تغليف أثاث منزلي" className="img-fluid" style={{ borderRadius: "24px", height: "420px", width: "100%", objectFit: "cover", boxShadow: "var(--shadow-soft)" }} />
-                    </div>
-                </div>
-            </section>
+        <>
+            <PageBanner
+                tag="حماية قصوى لمقتنياتك"
+                title="خدمة تغليف الأثاث الاحترافي"
+                subtitle="خامات تغليف ألمانية مستوردة، كراتين مقواة، وبطاطين سميكة لعزل الصدمات والخدوش."
+                breadcrumb="تغليف الأثاث الاحترافي"
+                image="/images/banner-pro-packing-desktop.jpg"
+                mobileImage="/images/banner-pro-packing-mobile.jpg"
+            />
 
-            <section className="section pt-0">
-                <div className="surface-card">
-                    <h2 className="section-title" style={{ fontSize: "1.8rem" }}>أنواع التغليف داخل الخدمة</h2>
-                    <div className="row mt-4 g-4">
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(159,107,63,0.08)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>التغليف الصندوقي</h4>
-                                <p>صناديق مقواة للملابس، الكتب، والأجهزة الكهربائية الصغيرة مع فواصل داخلية لحماية المحتويات.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(243,162,97,0.09)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>التغليف العازل</h4>
-                                <p>شرائح فوم عالية الكثافة للزجاجيات والرخام تمنع الكسر أثناء الاهتزاز داخل السيارة.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(31,41,51,0.05)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>التغليف الواقي للالكترونيات</h4>
-                                <p>أكياس مضادة للكهرباء الإستاتيكية للأجهزة اللوحية، الحواسب، والشاشات مع تغطية كاملة للحواف.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section pt-0">
-                <div className="row">
-                    <div className="col-lg-5 mb-4 mb-lg-0">
-                        <div className="surface-card h-100" style={{ padding: "2rem" }}>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>لماذا تختار تغليف المارد؟</h3>
-                            <ul className="list-unstyled" style={{ color: "var(--neutral-700)" }}>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> مواد تغليف مستوردة ومعتمدة ضد الرطوبة والخدوش.</li>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> توثيق مصوّر لحالة كل قطعة قبل وبعد التغليف.</li>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> إمكانية توفير تغليف مخصص لللوحات الفنية والتحف النادرة.</li>
+            <div className="content-container section pt-0">
+                {/* Service Hero */}
+                <section className="surface-card mb-5">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 mb-4 mb-lg-0">
+                            <span className="tag-pill mb-3">
+                                <i className="fa-solid fa-box-open"></i>
+                                <span>تغليف متكامل متعدد الطبقات</span>
+                            </span>
+                            <h2 className="section-title">
+                                تغليف يحمي كل قطعة أثاث ومقتنى ثمين كأنه جديد
+                            </h2>
+                            <p className="lead-text">
+                                التغليف هو خط الدفاع الأول لسلامة العفش. نستخدم مواد تغليف متخصصة لكل نوع من الأثاث سواء كان خشباً، رخاماً، زجاجاً، أو أجهزة إلكترونية.
+                            </p>
+                            <ul className="list-unstyled mt-4" style={{ color: "var(--clr-neutral-700)" }}>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>بطاطين مبطنة سميكة للأثاث الخشبي تمنع أي احتكاك أو خدش.</span>
+                                </li>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>بابل راب هوائي متعدد الطبقات للأجهزة الكهربائية والشاشات والتحف.</span>
+                                </li>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>صناديق كرتونية مقواة ومبطنة بفواصل للزجاجيات ومقتنيات المطبخ.</span>
+                                </li>
                             </ul>
+                            <div className="service-actions">
+                                <a href="https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن خدمة تغليف الأثاث" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                                    <i className="fa-brands fa-whatsapp ml-1"></i>
+                                    <span>طلب معاينة التغليف</span>
+                                </a>
+                                <a href="tel:01097060751" className="btn btn-outline-primary">
+                                    <i className="fa-solid fa-phone ml-1"></i>
+                                    <span>01097060751</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <img 
+                                src="/images/ka.jpg" 
+                                alt="تغليف أثاث احترافي" 
+                                className="img-fluid" 
+                                style={{ 
+                                    borderRadius: "var(--r-xl)", 
+                                    height: "400px", 
+                                    width: "100%", 
+                                    objectFit: "cover", 
+                                    boxShadow: "var(--shadow-lg)" 
+                                }} 
+                            />
                         </div>
                     </div>
-                    <div className="col-lg-7">
-                        <div className="surface-card" style={{ padding: "2rem", background: "rgba(243,162,97,0.08)" }}>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>خطوات التنفيذ في يوم النقل</h3>
-                            <ol className="pl-3" style={{ color: "var(--neutral-700)", lineHeight: 2 }}>
-                                <li>التأكد من تفريغ المحتويات وتوثيق حالة الأثاث أمام العميل.</li>
-                                <li>فك القطع الكبيرة (دواليب، سرير، مطبخ) بواسطة الفني المختص.</li>
-                                <li>التغليف متعدد الطبقات مع لصق الملصقات التعريفية لكل جزء.</li>
-                                <li>ترتيب الصناديق حسب الغرف لتسهيل التفريغ والتركيب في الموقع الجديد.</li>
-                            </ol>
-                            <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-pill">اطلب زيارة فني التغليف</a>
+                </section>
+
+                {/* Packaging Types Grid */}
+                <section className="section pt-0">
+                    <div className="section-header">
+                        <span className="tag-pill">
+                            <i className="fa-solid fa-layer-group"></i>
+                            <span>باقات وخامات التغليف</span>
+                        </span>
+                        <h2 className="section-title">أنواع خامات التغليف المستخدمة</h2>
+                        <p className="section-subtitle">
+                            نختار الخامة الأنسب لكل نوع قطعة وفقاً لحساسيتها وطبيعة نقلها لضمان الوصول الآمن.
+                        </p>
+                    </div>
+
+                    <div className="row g-4">
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-box"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">التغليف الكرتوني المقوى</h3>
+                                <p className="text-muted mb-0">كراتين 5 طبقات مخصصة للأطقم الزجاجية، الملابس، والأجهزة الكهربائية الصغيرة مع ملصقات تعريفية لكل صندوق.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-shield"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">التغليف الفقاعي الهوائي (بابل)</h3>
+                                <p className="text-muted mb-0">فقاعات هوائية سميكة لعزل الصدمات والاهتزازات وحماية الشاشات واللوحات والمرايات وأطقم الصيني الفاخرة.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-scroll"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">التغليف الاستريتش الحراري</h3>
+                                <p className="text-muted mb-0">رولات استريتش صناعي محكم لإغلاق الدواليب، الكنب، والمراتب لمنع دخول الأتربة، الرطوبة، والحشرات أثناء النقل.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </>
     );
 }

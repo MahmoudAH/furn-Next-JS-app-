@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { submitContact } from './actions';
+import PageBanner from '../../components/PageBanner';
 
 export default function Contact() {
     const [status, setStatus] = useState(null);
@@ -24,101 +25,145 @@ export default function Contact() {
     };
 
     return (
-        <div className="container">
-            <section className="section pt-0 mt-4">
-                <div className="text-center mb-5">
-                    <span className="tag-pill"><i className="fa-solid fa-comments"></i><span>خدمة العملاء في خدمتك</span></span>
-                    <h1 className="section-title" style={{ fontSize: "2.2rem" }}>نحن جاهزون لنقل أثاثك متى أردت</h1>
-                    <p className="section-subtitle">أسهل طريقة للتواصل معنا هي الواتساب، فقط أرسل صور الغرف أو قائمة الأثاث وسنجهز لك عرض السعر في أقل من ساعة.</p>
-                    <div className="d-flex flex-wrap justify-content-center" style={{ gap: "1rem" }}>
-                        <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill"><i className="fa-brands fa-whatsapp ml-2"></i>دردشة واتساب مباشرة</a>
-                        <a href="tel:01097060751" className="btn btn-outline-primary rounded-pill"><i className="fa-solid fa-phone-volume ml-2"></i>اتصال فوري 01097060751</a>
-                    </div>
-                </div>
+        <>
+            <PageBanner
+                tag="متاحون 24 ساعة طوال الأسبوع"
+                title="تواصل معنا - حجز ومعاينة مجانية"
+                subtitle="فريق الدعم الفني جاهز للرد على كافة استفساراتكم وتحديد الموعد الأنسب للمعاينة والنقل."
+                breadcrumb="تواصل معنا"
+            />
 
-                <div className="row">
-                    <div className="col-lg-7 mb-4 mb-lg-0">
-                        <div className="contact-card">
+            <div className="content-container section pt-0">
+                <div className="row g-4">
+                    {/* Form Col */}
+                    <div className="col-lg-7">
+                        <div className="surface-card h-100">
                             {status && !status.success && (
-                                <div className="alert alert-danger rounded" role="alert">
-                                    <ul className="mb-0">
-                                        <li>{status.message}</li>
-                                    </ul>
+                                <div className="alert alert-danger rounded-3 p-3 mb-4" role="alert">
+                                    <i className="fa-solid fa-circle-exclamation ml-2"></i>
+                                    {status.message}
                                 </div>
                             )}
 
                             {status && status.success && (
-                                <div className="alert alert-success rounded" role="alert">
-                                    <h5 className="mb-0">{status.message}</h5>
+                                <div className="alert alert-success rounded-3 p-3 mb-4" role="alert">
+                                    <i className="fa-solid fa-circle-check ml-2"></i>
+                                    {status.message}
                                 </div>
                             )}
 
-                            <h2 style={{ fontWeight: 700, marginBottom: "1.5rem" }}>أرسل طلبك عبر النموذج</h2>
-                            <p style={{ color: "var(--neutral-600)" }}>سنعاود الاتصال بك خلال 60 دقيقة لتأكيد التفاصيل واختيار موعد المعاينة المناسب.</p>
+                            <h2 className="h4 fw-bold mb-2">أرسل طلبك للحصول على عرض سعر مكتوب</h2>
+                            <p className="text-muted mb-4">
+                                املأ النموذج وسيقوم مسؤول الحجوزات بالاتصال بك لتأكيد التفاصيل وموعد المعاينة المناسب.
+                            </p>
+
                             <form onSubmit={handleSubmit}>
-                                <div className="form-group mb-3">
-                                    <label htmlFor="form-name">الاسم الكامل</label>
-                                    <input type="text" id="form-name" name="name" className="form-control" placeholder="أدخل اسمك" required />
+                                <div className="mb-3">
+                                    <label htmlFor="form-name" className="form-label fw-bold">الاسم الكامل <span className="text-danger">*</span></label>
+                                    <input type="text" id="form-name" name="name" className="form-control" placeholder="أدخل اسمك الكريم" required />
                                 </div>
-                                <div className="form-group mb-3">
-                                    <label htmlFor="form-email">البريد الإلكتروني</label>
-                                    <input type="email" id="form-email" name="email" className="form-control" placeholder="example@email.com" />
+
+                                <div className="row g-3 mb-3">
+                                    <div className="col-md-6">
+                                        <label htmlFor="form-phone" className="form-label fw-bold">رقم الهاتف / الواتساب <span className="text-danger">*</span></label>
+                                        <input type="tel" id="form-phone" name="phone" className="form-control" placeholder="01xxxxxxxxx" required />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="form-address" className="form-label fw-bold">المنطقة الحالية والوجهة</label>
+                                        <input type="text" id="form-address" name="address" className="form-control" placeholder="مثال: من مدينة نصر إلى التجمع" />
+                                    </div>
                                 </div>
-                                <div className="form-group mb-3">
-                                    <label htmlFor="form-address">المدينة / العنوان</label>
-                                    <input type="text" id="form-address" name="address" className="form-control" placeholder="المنطقة أو عنوان الاستلام" />
+
+                                <div className="mb-4">
+                                    <label htmlFor="form-text" className="form-label fw-bold">تفاصيل الأثاث المطلوب نقله <span className="text-danger">*</span></label>
+                                    <textarea id="form-text" name="message" className="form-control" rows="4" placeholder="اذكر عدد الغرف، الطابق، وهل تحتاج لونش رفع أو تغليف إضافي؟" required></textarea>
                                 </div>
-                                <div className="form-group mb-4">
-                                    <label htmlFor="form-text">تفاصيل الطلب</label>
-                                    <textarea id="form-text" name="message" className="form-control" rows="4" placeholder="اكتب وصفاً مختصراً للأثاث وعدد الغرف" required></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary rounded-pill" disabled={isSubmitting}>
-                                    {isSubmitting ? 'جاري الإرسال...' : 'إرسال الطلب'}
+
+                                <button type="submit" className="btn btn-primary w-100" style={{ padding: "0.85rem" }} disabled={isSubmitting}>
+                                    {isSubmitting ? (
+                                        <>
+                                            <i className="fa-solid fa-spinner fa-spin ml-2"></i>
+                                            <span>جاري إرسال الطلب...</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <i className="fa-solid fa-paper-plane ml-2"></i>
+                                            <span>إرسال طلب المعاينة وعرض السعر</span>
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
                     </div>
+
+                    {/* Direct Contacts Col */}
                     <div className="col-lg-5">
-                        <div className="surface-card h-100" style={{ padding: "2.25rem" }}>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1.5rem" }}>بيانات التواصل السريع</h3>
-                            <div className="contact-details">
-                                <div className="mb-4">
-                                    <div className="icon-box mb-3"><i className="fa-solid fa-phone"></i></div>
-                                    <p className="mb-1"><a href="tel:01097060751">01097060751</a></p>
-                                    <p className="mb-0"><a href="tel:01202750832">01202750832</a></p>
-                                </div>
-                                <div className="mb-4">
-                                    <div className="icon-box mb-3"><i className="fa-brands fa-whatsapp"></i></div>
-                                    <p className="mb-0"><a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer">واتساب المارد لنقل الأثاث</a></p>
-                                </div>
-                                <div className="mb-4">
-                                    <div className="icon-box mb-3"><i className="fa-solid fa-envelope"></i></div>
-                                    <p className="mb-1"><a href="mailto:khaledahmed24680@gmail.com">khaledahmed24680@gmail.com</a></p>
-                                    <p className="mb-0"><a href="mailto:khahmed8642@yahoo.com">khahmed8642@yahoo.com</a></p>
-                                </div>
-                                <div className="mb-0">
-                                    <div className="icon-box mb-3"><i className="fa-solid fa-location-dot"></i></div>
-                                    <p className="mb-0">القاهرة - مدينة نصر، شارع محمد حسنين، مبنى 22</p>
+                        <div className="surface-card contact-details-card h-100">
+                            <div className="contact-details-content">
+                                <h3 className="h4 fw-bold contact-details-title">قنوات الاتصال المباشرة</h3>
+
+                                <div className="contact-info-list">
+                                    <div className="contact-info-entry">
+                                        <span className="icon-circle contact-info-icon">
+                                            <i className="fa-solid fa-phone-volume"></i>
+                                        </span>
+                                        <div className="contact-info-copy">
+                                            <strong>أرقام خدمة العملاء</strong>
+                                            <p className="mb-0"><a href="tel:01097060751" className="fw-bold text-dark">01097060751</a></p>
+                                            <p className="mb-0"><a href="tel:01202750832" className="fw-bold text-dark">01202750832</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div className="contact-info-entry">
+                                        <span className="icon-circle contact-info-icon">
+                                            <i className="fa-brands fa-whatsapp"></i>
+                                        </span>
+                                        <div className="contact-info-copy">
+                                            <strong>واتساب الدكتور</strong>
+                                            <p className="mb-0 text-muted">إرسال الصور والفيديوهات لتقييم السعر</p>
+                                            <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="fw-bold text-primary">
+                                                تواصل عبر واتساب فوراً
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="contact-info-entry">
+                                        <span className="icon-circle contact-info-icon">
+                                            <i className="fa-solid fa-location-dot"></i>
+                                        </span>
+                                        <div className="contact-info-copy">
+                                            <strong>المقر الرئيسي</strong>
+                                            <p className="mb-0 text-muted">القاهرة - مدينة نصر، شارع محمد حسنين هيكل</p>
+                                            <span className="badge bg-light text-dark border mt-1">نغطي كافة أحياء القاهرة والجيزة</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="contact-info-entry">
+                                        <span className="icon-circle contact-info-icon">
+                                            <i className="fa-solid fa-clock"></i>
+                                        </span>
+                                        <div className="contact-info-copy">
+                                            <strong>مواعيد العمل</strong>
+                                            <p className="mb-0 text-muted">المكتب الفني: 8 صباحاً - 11 مساءً</p>
+                                            <p className="mb-0 text-success fw-bold">طوارئ النقل: متوفر 24 ساعة طوال الأسبوع</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="mt-4">
-                                <h4 style={{ fontWeight: 700, marginBottom: "1rem" }}>ساعات العمل</h4>
-                                <p className="mb-1">الأحد - الخميس: 9 صباحاً حتى 6 مساءً</p>
-                                <p className="mb-0">خدمة الطوارئ: 24/7 للانتقالات السريعة</p>
+
+                            <div className="contact-assurance">
+                                <div className="contact-assurance-title">
+                                    <i className="fa-solid fa-shield-check"></i>
+                                    <span>معاينة مجانية بدون أي التزام</span>
+                                </div>
+                                <p className="contact-assurance-text">
+                                    نرسل لك مندوباً لمعاينة العفش وتحديد أفضل مسار لنزول الونش مجاناً داخل القاهرة والجيزة.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section className="section pt-0">
-                <div className="surface-card">
-                    <h3 style={{ fontWeight: 700, marginBottom: "1.5rem" }}>موقعنا على الخريطة</h3>
-                    <div style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "var(--shadow-soft)", height: "380px" }}>
-                        <iframe src="https://www.google.com/maps/embed/v1/place?q=Cairo%20Festival%20City&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="100%" height="100%" frameBorder="0" style={{ border: 0 }} allowFullScreen></iframe>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </>
     );
 }
