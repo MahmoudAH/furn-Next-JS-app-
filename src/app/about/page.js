@@ -2,8 +2,8 @@ import Link from 'next/link';
 import PageBanner from '../../components/PageBanner';
 
 export const metadata = {
-    title: 'من نحن | الدكتور لنقل وتغليف الأثاث',
-    description: 'تعرف على قصة الدكتور لنقل الأثاث، أسطول شاحناتنا المجهزة، فريق العمل الفني، والتزامنا بأعلى معايير الأمان والضمان.',
+    title: 'من نحن',
+    description: 'تعرف على الونش، أسطول شاحناتنا المجهزة، فريق العمل الفني، والتزامنا بمعايير الأمان والعناية بالأثاث.',
 };
 
 export default function About() {
@@ -12,9 +12,10 @@ export default function About() {
             {/* Consistent Internal Page Banner */}
             <PageBanner
                 tag="خبرة أكثر من 20 عاماً في نقل الأثاث"
-                title="من نحن - شركة الدكتور لنقل وتغليف الأثاث"
+                title="من نحن - شركة الونش لنقل وتغليف الأثاث"
                 subtitle="رحلتنا بدأت في القاهرة لنكون الخيار الأول والأكثر موثوقية للأسر والشركات في مصر."
                 breadcrumb="من نحن"
+                image="/images/about-moving-banner.svg"
             />
 
             <div className="content-container section pt-0">
@@ -54,8 +55,8 @@ export default function About() {
 
                         <div className="col-lg-6">
                             <img 
-                                src="/images/WhatsApp Image 2020-09-07 at 11.13.40 PM (2) (1).jpg" 
-                                alt="فريق الدكتور لنقل وتغليف الأثاث" 
+                                src="/images/about-careful-moving.svg"
+                                alt="فريق متخصص يحمل كنبة مغلفة بعناية إلى المنزل الجديد"
                                 className="img-fluid" 
                                 style={{ 
                                     borderRadius: "var(--r-xl)", 

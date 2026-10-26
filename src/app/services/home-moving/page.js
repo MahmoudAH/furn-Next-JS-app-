@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
 
 export const metadata = {
-    title: 'نقل المنازل والشقق | الدكتور لنقل الأثاث',
+    title: 'نقل المنازل والشقق',
     description: 'خدمة نقل عفش المنازل والشقق والفلل بالقاهرة والجيزة والمحافظات. ونش هيدروليكي، فك وتركيب، وسيارات شحن مغلقة.',
 };
 
@@ -14,8 +14,7 @@ export default function HomeMovingService() {
                 title="خدمة نقل المنازل والشقق والفلل"
                 subtitle="رحلة نقل متكاملة تشمل الفك، التغليف، التحميل بالونش الهيدروليكي، والتركيب الكامل."
                 breadcrumb="نقل المنازل والشقق"
-                image="/images/banner-home-moving-desktop.jpg"
-                mobileImage="/images/banner-home-moving-mobile.jpg"
+                image="/images/real/hoist/truck-lift-wide.jpeg"
             />
 
             <div className="content-container section pt-0">
@@ -61,8 +60,8 @@ export default function HomeMovingService() {
 
                         <div className="col-lg-6">
                             <img 
-                                src="/images/mard.jpg" 
-                                alt="نقل عفش منازل احترافي" 
+                                src="/images/real/moving/loading-team.jpeg"
+                                alt="فريق ينقل الأثاث المغلف عبر الونش"
                                 className="img-fluid" 
                                 style={{ 
                                     borderRadius: "var(--r-xl)", 

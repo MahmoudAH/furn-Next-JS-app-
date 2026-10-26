@@ -1,1 +1,1 @@
-This SVG logo is a sample for the brand "الدكتور". It uses a modern blue background, bold Arabic text, and a simple icon for a professional look. You can edit or replace it as needed.
+The Al-Wensh full image wordmark combines the moving-truck emblem, Arabic brand name, and tagline. Use /images/logo-alwensh.svg on light backgrounds, /images/logo-alwensh-footer.svg on dark backgrounds, and /images/logo-alwensh-mini.svg for the favicon.

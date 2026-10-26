@@ -31,6 +31,7 @@ export default function Contact() {
                 title="تواصل معنا - حجز ومعاينة مجانية"
                 subtitle="فريق الدعم الفني جاهز للرد على كافة استفساراتكم وتحديد الموعد الأنسب للمعاينة والنقل."
                 breadcrumb="تواصل معنا"
+                image="/images/contact-moving-banner.svg"
             />
 
             <div className="content-container section pt-0">
@@ -119,7 +120,7 @@ export default function Contact() {
                                             <i className="fa-brands fa-whatsapp"></i>
                                         </span>
                                         <div className="contact-info-copy">
-                                            <strong>واتساب الدكتور</strong>
+                                            <strong>واتساب الونش</strong>
                                             <p className="mb-0 text-muted">إرسال الصور والفيديوهات لتقييم السعر</p>
                                             <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="fw-bold text-primary">
                                                 تواصل عبر واتساب فوراً

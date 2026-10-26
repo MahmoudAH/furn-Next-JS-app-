@@ -8,19 +8,19 @@ export default function HeroCarousel() {
 
     const slides = [
         {
-            image: "/images/hero-relocation.jpg",
-            alt: "نقل أثاث منزلي احترافي في مصر",
-            badge: "خدمة نقل عفش رقم #1 في القاهرة والجيزة",
-            title: "نقل وتغليف عفش منزلك بأيدي فنيين محترفين وأحدث الأوناش",
-            desc: "فريق معتمد لفك وتغليف وتحميل الأثاث بأعلى معايير الأمان وضمان سلامة 100% لكل قطعة حتى التركيب النهائي.",
+            image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa-2.png",
+            alt: "فريق نقل يرفع أريكة مغلفة إلى شقة",
+            badge: "خدمات نقل أثاث في القاهرة والجيزة",
+            title: "نقل وتغليف أثاث منزلك بعناية واحترافية",
+            desc: "فريق متخصص لفك وتغليف وتحميل الأثاث، مع عناية بكل قطعة من بداية النقل حتى التركيب.",
             primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن نقل العفش",
             primaryText: "احجز زيارة مجانية الآن",
             phone: "01097060751",
         },
         {
-            image: "/images/hero-packing.jpg",
-            alt: "تغليف عفش متعدد الطبقات",
-            badge: "خامات تغليف ألمانية مستوردة",
+            image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa.png",
+            alt: "فريق نقل يرفع أريكة مغلفة إلى شقة",
+            badge: "خامات تغليف عالية الجودة",
             title: "تغليف احترافي متعدد الطبقات يحمي مقتنياتك من أي خدش",
             desc: "كراتين مقواة، بابل راب هوائي، بطاطين مبطنة، وتغليف استريتش حراري لحماية الأجهزة والزجاج والأنتيكات.",
             primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن خدمة التغليف",
@@ -28,9 +28,9 @@ export default function HeroCarousel() {
             phone: "01097060751",
         },
         {
-            image: "/images/hero-logistics.jpg",
-            alt: "أسطول سيارات مغلقة وأوناش هيدروليكية",
-            badge: "أسطول شاحنات حديث 2024",
+            image: "/images/Professional%20Movers%20Packing%20a%20Bright%20Apartment-3.png",
+            alt: "فريق متخصص يغلّف الأثاث داخل الشقة",
+            badge: "شاحنات مجهزة لنقل آمن",
             title: "أوناش هيدروليكية تصل للأدوار المرتفعة وسيارات نقل مغلقة",
             desc: "شاحنات صندوقية مجهزة بالداخل ومبطنة لحماية العفش أثناء المطبات، مع أوناش هيدروليكية للأدوار العليا الضيقة.",
             primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد ونش رفع عفش",
@@ -48,7 +48,7 @@ export default function HeroCarousel() {
     }, [slides.length]);
 
     useEffect(() => {
-        if (isPaused) return;
+        if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const interval = setInterval(nextSlide, 6500);
         return () => clearInterval(interval);
     }, [isPaused, nextSlide]);
@@ -56,7 +56,7 @@ export default function HeroCarousel() {
     return (
         <section
             className="hero-banner-section content-container"
-            aria-label="أبرز خدمات الدكتور لنقل الأثاث"
+            aria-label="أبرز خدمات الونش لنقل الأثاث"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -74,7 +74,7 @@ export default function HeroCarousel() {
                                     src={slide.image}
                                     alt={slide.alt}
                                     className="hero-slide-picture"
-                                    loading={index === 0 ? "eager" : "lazy"}
+                                    loading="eager"
                                 />
 
                                 <div className="hero-slide-backdrop"></div>

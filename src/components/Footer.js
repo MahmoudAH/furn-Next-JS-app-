@@ -12,13 +12,12 @@ export default function Footer() {
                         <div className="footer-col-about">
                             <div className="footer-brand-header">
                                 <img
-                                    src="/images/logo.svg"
-                                    alt="شعار الدكتور لنقل وتغليف الأثاث"
+                                    src="/images/logo-alwensh-footer.svg"
+                                    alt="الونش لنقل وتغليف الأثاث - نقل أثاثك على أصوله"
                                     className="footer-brand-icon"
-                                    width="44"
-                                    height="44"
+                                    width="180"
+                                    height="46"
                                 />
-                                <span className="footer-brand-title">الدكتور لنقل وتغليف الأثاث</span>
                             </div>
                             <p className="footer-about-text">
                                 الشركة الرائدة في خدمات نقل وتغليف وتخزين الأثاث داخل مصر. نعتمد على أحدث أوناش رفع العفش الهيدروليكية، وسيارات صندوقية مغلقة، وفريق فني محترف في فك وتركيب جميع أنواع غرف النوم والمطابخ.
@@ -57,6 +56,7 @@ export default function Footer() {
                             <ul className="footer-link-items">
                                 <li><Link href="/">الرئيسية</Link></li>
                                 <li><Link href="/about">من نحن</Link></li>
+                                <li><Link href="/blog">المدونة</Link></li>
                                 <li><Link href="/contact">طلب معاينة مجانية</Link></li>
                                 <li><Link href="/contact">تواصل مع الإدارة</Link></li>
                                 <li><a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer">دردشة واتساب مباشرة</a></li>
@@ -105,7 +105,7 @@ export default function Footer() {
 
                     <div className="footer-bottom-row">
                         <p className="footer-copy-text">
-                            © {currentYear} شركة الدكتور لنقل وتغليف الأثاث. جميع الحقوق محفوظة.
+                            © {currentYear} شركة الونش لنقل وتغليف الأثاث. جميع الحقوق محفوظة.
                         </p>
                         <p className="footer-coverage-text">
                             أسرع وأأمن خدمات نقل العفش في القاهرة والجيزة وجميع محافظات مصر.

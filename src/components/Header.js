@@ -112,16 +112,12 @@ export default function Header() {
                         {/* 1. Right side in RTL: Brand Logo + Name */}
                         <Link href="/" className="navbar-brand-link">
                             <img
-                                src="/images/logo.svg"
-                                alt="الدكتور لنقل الأثاث"
+                                src="/images/logo-alwensh.svg"
+                                alt="الونش لنقل وتغليف الأثاث - نقل أثاثك على أصوله"
                                 className="navbar-brand-img"
-                                width="46"
-                                height="46"
+                                width="150"
+                                height="47"
                             />
-                            <div className="navbar-brand-text">
-                                <span className="navbar-brand-title">الدكتور</span>
-                                <span className="navbar-brand-desc">لنقل وتغليف الأثاث</span>
-                            </div>
                         </Link>
 
                         {/* 2. Middle: Navigation Links (Clean plain text, NO icons) */}
@@ -183,6 +179,15 @@ export default function Header() {
                                     className={`navbar-link-item${pathname === "/about" ? " is-active" : ""}`}
                                 >
                                     من نحن
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/blog"
+                                    className={`navbar-link-item${pathname.startsWith("/blog") ? " is-active" : ""}`}
+                                >
+                                    المدونة
                                 </Link>
                             </li>
 
@@ -254,6 +259,9 @@ export default function Header() {
 
                                 <Link href="/about" className={`mobile-link-item${pathname === "/about" ? " is-active" : ""}`}>
                                     من نحن
+                                </Link>
+                                <Link href="/blog" className={`mobile-link-item${pathname.startsWith("/blog") ? " is-active" : ""}`}>
+                                    المدونة
                                 </Link>
                                 <Link href="/contact" className={`mobile-link-item${pathname === "/contact" ? " is-active" : ""}`}>
                                     تواصل معنا

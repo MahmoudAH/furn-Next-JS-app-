@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F0E8"/>
+      <stop offset=".58" stop-color="#DCE5E8"/>
+      <stop offset="1" stop-color="#B8C8CF"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#64717A"/>
+      <stop offset="1" stop-color="#273645"/>
+    </linearGradient>
+    <linearGradient id="truck" x1="202" y1="335" x2="930" y2="605" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B3046"/>
+      <stop offset="1" stop-color="#0C1929"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#E9C991"/>
+      <stop offset="1" stop-color="#BE9256"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#0D1B2B" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#0D1B2B" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#0D1B2B" stop-opacity=".72"/>
+    </linearGradient>
+    <pattern id="windows" width="74" height="92" patternUnits="userSpaceOnUse">
+      <rect x="11" y="12" width="47" height="62" rx="3" fill="#AEC1C7"/>
+      <rect x="15" y="16" width="39" height="54" rx="2" fill="#768F9B"/>
+      <path d="M34.5 16v54M15 42.5h39" stroke="#D9E2DF" stroke-width="3"/>
+    </pattern>
+    <filter id="shadow" x="150" y="250" width="850" height="420" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="700" fill="url(#sky)"/>
+  <circle cx="1230" cy="122" r="64" fill="#F6D99D" fill-opacity=".74"/>
+  <path d="M0 385 102 322l82 40 113-113 91 72 87-116 105 93 92-74 115 95 89-61 103 91 86-44 104 79v176H0V385Z" fill="#D6DEDA"/>
+  <path d="M0 300h304v302H0z" fill="#C7D1D0"/>
+  <path d="M0 300h304v302H0z" fill="url(#windows)" opacity=".85"/>
+  <path d="M91 254h274v350H91z" fill="#E9E5DB"/>
+  <path d="M104 276h248v328H104z" fill="url(#windows)" opacity=".76"/>
+  <path d="M286 224h288v380H286z" fill="#D5D8D0"/>
+  <path d="M301 250h258v354H301z" fill="url(#windows)"/>
+  <path d="M526 300h178v304H526z" fill="#E9E4D9"/>
+  <path d="M542 326h144v278" fill="url(#windows)" opacity=".68"/>
+  <path d="M0 583c290-29 515-19 768-2 258 18 499-4 832-15v134H0V583Z" fill="url(#road)"/>
+  <path d="M0 602c321-28 561-11 812 2 252 13 512-7 788-21" stroke="#D6C69F" stroke-opacity=".72" stroke-width="4"/>
+  <path d="M135 640h129m104 0h113m125 0h117m121 0h123" stroke="#F5E9CF" stroke-opacity=".72" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="578" cy="585" rx="355" ry="42" fill="#081421" fill-opacity=".36" filter="url(#shadow)"/>
+  <path d="M198 364c0-23 19-42 42-42h424c19 0 35 15 35 34v210H198V364Z" fill="url(#truck)"/>
+  <path d="M698 430h129c20 0 39 11 49 28l67 112v24H699V430Z" fill="#F4F0E8"/>
+  <path d="M712 449h107c11 0 21 6 27 15l38 62H712V449Z" fill="#7FA1AE"/>
+  <path d="M733 456h76v63h-76z" fill="#BDD0D2" fill-opacity=".76"/>
+  <path d="M198 370c0-18 15-33 33-33h404v196H198V370Z" fill="#F5F1E8"/>
+  <path d="M226 360h375v152H226z" fill="#D9D1C4"/>
+  <path d="M244 383h180v104H244z" fill="url(#box)"/>
+  <path d="M434 368h148v119H434z" fill="#D6B77F"/>
+  <path d="M270 383v104m-26-52h180m12-67v119m-26-61h148" stroke="#A87F49" stroke-opacity=".7" stroke-width="5"/>
+  <path d="M470 369v30l14-12 14 12v-30" stroke="#A87F49" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M224 538h383v29H224z" fill="#F2AA21"/>
+  <path d="M252 548h220" stroke="#FFF1D1" stroke-width="5" stroke-linecap="round" stroke-opacity=".8"/>
+  <path d="M752 550h101l19 28H752v-28Z" fill="#E6A01B"/>
+  <path d="M199 568h722v33H199z" fill="#101D2B"/>
+  <path d="M241 584h620" stroke="#506273" stroke-width="3"/>
+  <circle cx="334" cy="590" r="49" fill="#101923"/>
+  <circle cx="334" cy="590" r="27" fill="#B9C0BD"/>
+  <circle cx="334" cy="590" r="12" fill="#52616D"/>
+  <circle cx="792" cy="590" r="49" fill="#101923"/>
+  <circle cx="792" cy="590" r="27" fill="#B9C0BD"/>
+  <circle cx="792" cy="590" r="12" fill="#52616D"/>
+  <path d="M228 518h18m668 0h18" stroke="#F2AA21" stroke-width="8" stroke-linecap="round"/>
+  <path d="M885 379v-47h45v47m-23-47v-18m-27 18h54" stroke="#21384D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M898 312c0-13 10-23 23-23s23 10 23 23v7" stroke="#F0A51B" stroke-width="9" stroke-linecap="round"/>
+  <path d="M0 0h1600v700H0z" fill="url(#shade)"/>
+</svg>

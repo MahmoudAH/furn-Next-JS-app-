@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
 
 export const metadata = {
-    title: 'حلول الشركات والمكاتب | الدكتور لنقل الأثاث',
+    title: 'حلول الشركات والمكاتب',
     description: 'نقل مقرات الشركات، المكاتب الإدارية، المعارض التجارية، وغرف السيرفرات باحترافية عالية وجداول زمنية مرنة تقلل فترات التوقف.',
 };
 
@@ -14,8 +14,7 @@ export default function BusinessRelocationService() {
                 title="خدمة نقل مقرات الشركات والمكاتب"
                 subtitle="خطط تنفيذ مرنة أثناء عطلات نهاية الأسبوع أو المساء لضمان استمرارية أعمالكم دون أي تعطل."
                 breadcrumb="حلول الشركات والمكاتب"
-                image="/images/banner-business-relocation-desktop.jpg"
-                mobileImage="/images/banner-business-relocation-mobile.jpg"
+                image="/images/real/fleet/moving-trucks.jpeg"
             />
 
             <div className="content-container section pt-0">
@@ -31,7 +30,7 @@ export default function BusinessRelocationService() {
                                 نقل مقرات الشركات والمكاتب دون تعطيل سير العمل
                             </h2>
                             <p className="lead-text">
-                                ندرك في الدكتور لنقل الأثاث أن كل ساعة توقف في الشركة تعني تكلفة. لذلك نوفر خطط نقل مرنة خلال العطلات الأسبوعية أو الفترات المسائية مع إشراف هندسي وتنفيذي دقيق.
+                                ندرك في الونش أن كل ساعة توقف في الشركة تعني تكلفة. لذلك نوفر خطط نقل مرنة خلال العطلات الأسبوعية أو الفترات المسائية مع إشراف هندسي وتنفيذي دقيق.
                             </p>
                             <ul className="list-unstyled mt-4" style={{ color: "var(--clr-neutral-700)" }}>
                                 <li className="mb-3 d-flex align-items-center gap-2">
@@ -61,8 +60,8 @@ export default function BusinessRelocationService() {
 
                         <div className="col-lg-6">
                             <img 
-                                src="/images/taa.jpg" 
-                                alt="نقل مكاتب ومقرات إدارية" 
+                                src="/images/real/hoist/truck-lift-wide.jpeg"
+                                alt="ونش رفع الأثاث ضمن تجهيزات عملية الانتقال"
                                 className="img-fluid" 
                                 style={{ 
                                     borderRadius: "var(--r-xl)", 

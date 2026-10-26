@@ -2,11 +2,11 @@ import Link from 'next/link';
 import HeroCarousel from '../components/HeroCarousel';
 
 export const metadata = {
-    title: 'الدكتور لنقل وتغليف الأثاث | شركة نقل عفش بالقاهرة والجيزة',
-    description: 'الدكتور لنقل الأثاث يقدم خدمات نقل عفش شاملة تشمل التغليف الاحترافي، الونش الهيدروليكي، وسيارات النقل المجهزة بين أحياء القاهرة والجيزة والمحافظات.',
+    title: 'الونش لنقل وتغليف الأثاث | نقل عفش بالقاهرة والجيزة',
+    description: 'الونش يقدم خدمات نقل عفش شاملة تشمل التغليف الاحترافي، الونش الهيدروليكي، وسيارات النقل المجهزة في القاهرة والجيزة والمحافظات.',
     keywords: 'شركة نقل عفش بالقاهرة, شركة نقل أثاث بالجيزة, ونش رفع اثاث, تغليف الاثاث, فك وتركيب عفش, اسعار نقل الاثاث في مصر',
     openGraph: {
-        images: ['/images/hero-relocation.jpg'],
+        images: ['/images/real/hoist/truck-lift-wide.jpeg'],
     }
 };
 
@@ -34,7 +34,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/ka.jpg" alt="ونش رفع الأثاث الهيدروليكي" loading="lazy" />
+                                <img src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعيد تركيب أثاث غرفة النوم" loading="eager" />
                                 <span className="feature-overlay">ونش هيدروليكي حتى الدور 18</span>
                             </div>
                             <div className="card-body">
@@ -52,7 +52,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/mard.jpg" alt="تغليف الأثاث بالبابل والكراتين" loading="lazy" />
+                                <img src="/images/real/packing/team-wrapping.jpeg" alt="فريق يغلّف قطعة أثاث لحمايتها أثناء النقل" loading="eager" />
                                 <span className="feature-overlay">خامات تغليف ألمانية</span>
                             </div>
                             <div className="card-body">
@@ -70,7 +70,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/hero-relocation.jpg" alt="سيارات نقل عفش مغلقة" loading="lazy" />
+                                <img src="/images/real/hoist/truck-lift-wide.jpeg" alt="ونش هيدروليكي يساعد على رفع الأثاث بأمان" loading="eager" />
                                 <span className="feature-overlay">سيارات صندوقية مبطنة</span>
                             </div>
                             <div className="card-body">
@@ -93,7 +93,7 @@ export default function Home() {
                         <div className="trust-intro">
                             <span className="tag-pill">
                                 <i className="fa-solid fa-circle-check"></i>
-                                <span>لماذا تختار الدكتور؟</span>
+                                <span>لماذا تختار الونش؟</span>
                             </span>
                             <h2 className="section-title">
                                 لماذا يثق بنا آلاف العملاء في نقل مقتنياتهم؟
@@ -167,7 +167,7 @@ export default function Home() {
                     <div className="gallery-grid">
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/WhatsApp Image 2020-09-07 at 11.13.40 PM (2) (1).jpg" alt="تغليف أثاث غرف النوم الخشبية" loading="lazy" />
+                                <img src="/images/real/packing/wrapped-sofas.jpeg" alt="أرائك مغلفة لحمايتها قبل نقلها" loading="eager" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-shield-halved ml-1"></i> تغليف آمن</span>
                             </div>
                             <figcaption>
@@ -178,7 +178,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/WhatsApp Image 2020-09-07 at 11.13.39 PM (1).jpeg" alt="رفع الأثاث بالونش الهيدروليكي" loading="lazy" />
+                                <img src="/images/real/hoist/building-lift.jpeg" alt="ونش هيدروليكي يرفع الأثاث إلى طابق مرتفع" loading="eager" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-up-long ml-1"></i> ونش هيدروليكي</span>
                             </div>
                             <figcaption>
@@ -189,7 +189,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/hero-packing.jpg" alt="تعبئة وتغليف المقتنيات الحساسة" loading="lazy" />
+                                <img src="/images/real/packing/wrapped-appliances.jpeg" alt="أجهزة منزلية مغلفة لحمايتها أثناء النقل" loading="eager" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-box ml-1"></i> صناديق مقواة</span>
                             </div>
                             <figcaption>
@@ -200,7 +200,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/WhatsApp Image 2020-09-07 at 11.13.39 PM.jpeg" alt="فريق النجارين أثناء تركيب الأثاث" loading="lazy" />
+                                <img src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعمل على تركيب سرير في المنزل" loading="eager" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-screwdriver-wrench ml-1"></i> فك وتركيب</span>
                             </div>
                             <figcaption>
@@ -352,9 +352,9 @@ export default function Home() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "MovingCompany",
-                        "name": "الدكتور لنقل وتغليف الأثاث",
-                        "image": "https://furniture-moving-eg.com/images/hero-relocation.jpg",
-                        "url": "https://wa.me/201097060751",
+                        "name": "الونش لنقل وتغليف الأثاث",
+                        "image": "https://furniture-moving-eg.com/images/real/hoist/truck-lift-wide.jpeg",
+                        "url": "https://furniture-moving-eg.com/",
                         "telephone": "+201097060751",
                         "areaServed": ["القاهرة", "الجيزة", "مدينة نصر", "التجمع الخامس", "6 أكتوبر", "الشيخ زايد", "المعادي"],
                         "sameAs": ["https://wa.me/201097060751"],

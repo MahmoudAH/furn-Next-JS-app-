@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
 
 export const metadata = {
-    title: 'تغليف الأثاث الاحترافي | الدكتور لنقل الأثاث',
+    title: 'تغليف الأثاث الاحترافي',
     description: 'خدمات تغليف عفش وأثاث منزلي بالبابل راب، الكراتين المقواة، والبطاطين السميكة لحماية غرف النوم والزجاج والأجهزة الكهربائية.',
 };
 
@@ -12,10 +12,9 @@ export default function ProPackingService() {
             <PageBanner
                 tag="حماية قصوى لمقتنياتك"
                 title="خدمة تغليف الأثاث الاحترافي"
-                subtitle="خامات تغليف ألمانية مستوردة، كراتين مقواة، وبطاطين سميكة لعزل الصدمات والخدوش."
+                subtitle="كراتين مقواة وبطاطين سميكة ومواد تغليف مناسبة لحماية الأثاث من الصدمات والخدوش."
                 breadcrumb="تغليف الأثاث الاحترافي"
-                image="/images/banner-pro-packing-desktop.jpg"
-                mobileImage="/images/banner-pro-packing-mobile.jpg"
+                image="/images/real/packing/team-wrapping.jpeg"
             />
 
             <div className="content-container section pt-0">
@@ -61,8 +60,8 @@ export default function ProPackingService() {
 
                         <div className="col-lg-6">
                             <img 
-                                src="/images/ka.jpg" 
-                                alt="تغليف أثاث احترافي" 
+                                src="/images/real/packing/wrapped-sofas.jpeg"
+                                alt="أرائك مغلفة لحمايتها أثناء نقل الأثاث"
                                 className="img-fluid" 
                                 style={{ 
                                     borderRadius: "var(--r-xl)", 
