@@ -1,4 +1,4 @@
-const author = "الونش لنقل وتغليف الأثاث";
+const author = "ايجي موف";
 
 export const blogCategories = [
     { slug: "moving-planning", name: "التخطيط للنقل" },

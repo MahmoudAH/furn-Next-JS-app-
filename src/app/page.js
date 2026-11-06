@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import HeroCarousel from '../components/HeroCarousel';
+import { BRAND_NAME, BRAND_NAME_EN, SITE_URL, createPageMetadata } from '../lib/site';
 
-export const metadata = {
-    title: 'الونش لنقل وتغليف الأثاث | نقل عفش بالقاهرة والجيزة',
-    description: 'الونش يقدم خدمات نقل عفش شاملة تشمل التغليف الاحترافي، الونش الهيدروليكي، وسيارات النقل المجهزة في القاهرة والجيزة والمحافظات.',
-    keywords: 'شركة نقل عفش بالقاهرة, شركة نقل أثاث بالجيزة, ونش رفع اثاث, تغليف الاثاث, فك وتركيب عفش, اسعار نقل الاثاث في مصر',
-    openGraph: {
-        images: ['/images/real/hoist/truck-lift-wide.jpeg'],
-    }
-};
+export const metadata = createPageMetadata({
+    title: "نقل عفش بالقاهرة والجيزة",
+    description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش في القاهرة والجيزة. تعرّف على خدمات نقل المنازل والمكاتب، التغليف، والفك والتركيب واطلب عرض سعر.`,
+    path: "/",
+    image: "/images/real/hoist/truck-lift-wide.jpeg",
+    imageAlt: "سيارة مجهزة لنقل الأثاث في مصر",
+});
 
 export default function Home() {
     return (
@@ -93,10 +93,10 @@ export default function Home() {
                         <div className="trust-intro">
                             <span className="tag-pill">
                                 <i className="fa-solid fa-circle-check"></i>
-                                <span>لماذا تختار الونش؟</span>
+                                <span>لماذا تختار ايجي موف؟</span>
                             </span>
                             <h2 className="section-title">
-                                لماذا يثق بنا آلاف العملاء في نقل مقتنياتهم؟
+                                نقل أثاث منظم يبدأ بخطة واضحة
                             </h2>
                             <p className="lead-text">
                                 نحن ندرك قيمة ممتلكاتك وذكرياتك، لذلك صممنا منظومة عمل محكمة ترتكز على الانضباط والدقة في المواعيد وسلامة الأثاث.
@@ -112,13 +112,13 @@ export default function Home() {
                             <li className="trust-benefit">
                                 <i className="fa-solid fa-circle-check" aria-hidden="true"></i>
                                 <span>
-                                    <strong>تأمين شامل وسلامة مضمونة 100%:</strong> نلتزم بتعويض أو إصلاح أي قطعة تتأثر أثناء عملية النقل لا قدر الله.
+                                    <strong>خطة تناسب احتياجك:</strong> نحدد معك خدمات النقل والتغليف والفك والتركيب المطلوبة قبل التنفيذ.
                                 </span>
                             </li>
                             <li className="trust-benefit">
                                 <i className="fa-solid fa-circle-check" aria-hidden="true"></i>
                                 <span>
-                                    <strong>فرق فنية مدربة بزي موحد:</strong> نجارون، كهربائيون، وفنيو رفع عفش على أعلى درجات المهنية والأمانة.
+                                    <strong>عناية بالتفاصيل:</strong> نوضح خطوات التعامل مع الأثاث والقطع التي تحتاج إلى تغليف أو فك خاص.
                                 </span>
                             </li>
                         </ul>
@@ -138,12 +138,12 @@ export default function Home() {
                             <div className="process-item">
                                 <span className="step">02</span>
                                 <h4>الفك والتغليف والتحميل</h4>
-                                <p>نصل في الموعد المحدد بالدقيقة، نفك القطع ونغلف كل عنصر بخامات متخصصة ونحمله بالونش الهيدروليكي.</p>
+                                <p>ينفذ الفريق الخدمات المتفق عليها، من فك القطع وتغليفها إلى تحميلها ونقلها حسب احتياجك.</p>
                             </div>
                             <div className="process-item">
                                 <span className="step">03</span>
                                 <h4>التسليم وإعادة التركيب</h4>
-                                <p>نفرغ العفش في عنوانك الجديد، ونعيد تركيب الغرف والمطابخ والأجهزة ونتأكد من رضاك الكامل قبل المغادرة.</p>
+                                <p>نفرغ الأثاث في وجهته الجديدة ونعيد تركيب القطع التي تم الاتفاق على فكها وتركيبها.</p>
                             </div>
                         </div>
                     </div>
@@ -221,21 +221,21 @@ export default function Home() {
                                 <i className="fa-solid fa-bolt ml-1"></i> عرض خاص لفترة محدودة
                             </span>
                             <h3 className="text-white fw-bold mb-1">
-                                خصم 20% على خدمات نقل العفش مع المعاينة والونش الهيدروليكي!
+                                خطط لنقل أثاثك مع ايجي موف
                             </h3>
                             <p className="mb-0 text-white-50">
-                                احصل على أفضل سعر لنقل شقتك أو فيلتك داخل القاهرة الكبرى والمدن الجديدة (التجمع، أكتوبر، زايد، الشروق).
+                                أرسل تفاصيل موقعك والمنقولات والخدمات التي تحتاجها للحصول على عرض سعر مناسب لعملية النقل.
                             </p>
                         </div>
                         <div className="col-lg-4 text-lg-end text-start">
                             <a
-                                href="https://wa.me/201097060751?text=مرحباً، أود الاستفادة من خصم الـ 20% على نقل العفش"
+                                href="https://wa.me/201041924242?text=مرحباً، أود الاستفسار عن خدمات نقل الأثاث"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-primary"
                             >
                                 <i className="fa-brands fa-whatsapp ml-1"></i>
-                                <span>احصل على الخصم الآن</span>
+                                <span>اطلب عرض سعر</span>
                             </a>
                         </div>
                     </div>
@@ -312,7 +312,7 @@ export default function Home() {
                                     </span>
                                     <span className="cta-trust-check">
                                         <i className="fa-solid fa-circle-check"></i>
-                                        <span>ضمان سلامة العفش 100%</span>
+                                        <span>تحديد الخدمات والتكلفة مسبقاً</span>
                                     </span>
                                     <span className="cta-trust-check">
                                         <i className="fa-solid fa-circle-check"></i>
@@ -323,7 +323,7 @@ export default function Home() {
                             <div className="cta-banner-actions">
                                 <div className="cta-buttons-stack">
                                     <a
-                                        href="https://wa.me/201097060751?text=مرحباً، أود حجز موعد لنقل العفش"
+                                        href="https://wa.me/201041924242?text=مرحباً، أود حجز موعد لنقل العفش"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn btn-whatsapp cta-main-btn"
@@ -332,11 +332,11 @@ export default function Home() {
                                         <span>احجز بالواتساب الآن</span>
                                     </a>
                                     <a
-                                        href="tel:01097060751"
+                                        href="tel:01041924242"
                                         className="btn cta-phone-btn"
                                     >
                                         <i className="fa-solid fa-phone-volume"></i>
-                                        <span dir="ltr">01097060751</span>
+                                        <span dir="ltr">01041924242</span>
                                     </a>
                                 </div>
                             </div>
@@ -352,12 +352,13 @@ export default function Home() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "MovingCompany",
-                        "name": "الونش لنقل وتغليف الأثاث",
-                        "image": "https://furniture-moving-eg.com/images/real/hoist/truck-lift-wide.jpeg",
-                        "url": "https://furniture-moving-eg.com/",
-                        "telephone": "+201097060751",
+                        "name": BRAND_NAME,
+                        "alternateName": BRAND_NAME_EN,
+                        "image": new URL("/images/real/hoist/truck-lift-wide.jpeg", SITE_URL).toString(),
+                        "url": SITE_URL,
+                        "telephone": "+201041924242",
                         "areaServed": ["القاهرة", "الجيزة", "مدينة نصر", "التجمع الخامس", "6 أكتوبر", "الشيخ زايد", "المعادي"],
-                        "sameAs": ["https://wa.me/201097060751"],
+                        "sameAs": ["https://wa.me/201041924242"],
                         "address": {
                             "@type": "PostalAddress",
                             "addressCountry": "EG",
@@ -365,7 +366,7 @@ export default function Home() {
                             "addressRegion": "القاهرة الكبرى"
                         },
                         "priceRange": "$$",
-                        "description": "شركة متخصصة في نقل وتغليف الأثاث والعفش بالقاهرة والجيزة مع خدمات الونش الهيدروليكي وسيارات مغلقة ومجهزة."
+                        "description": `${BRAND_NAME} لخدمات نقل وتغليف الأثاث والعفش في القاهرة والجيزة.`
                     })
                 }}
             />

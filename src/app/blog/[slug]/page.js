@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BlogCard from "../../../components/blog/BlogCard";
 import { articles, getArticleBySlug, getRelatedArticles } from "../../../lib/blog";
-import { SITE_URL } from "../../../lib/site";
+import { BRAND_NAME, SITE_URL } from "../../../lib/site";
 
 export function generateStaticParams() {
     return articles.map(({ slug }) => ({ slug }));
@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }) {
         author: { "@type": "Organization", name: article.author },
         publisher: {
             "@type": "Organization",
-            name: "الونش لنقل وتغليف الأثاث",
+            name: BRAND_NAME,
             url: SITE_URL,
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": new URL(articleUrl, SITE_URL).toString() },
@@ -112,9 +112,9 @@ export default async function ArticlePage({ params }) {
                             ))}
                             <aside className="blog-article-callout">
                                 <h2>لسه بتخطط للنقل؟</h2>
-                                <p>فريق الونش يقدر يساعدك تعرف التفاصيل المطلوبة لنقل أثاثك.</p>
+                                <p>فريق {BRAND_NAME} يساعدك في تحديد التفاصيل المطلوبة لنقل أثاثك.</p>
                                 <Link href="/contact" className="btn btn-primary">تواصل معانا</Link>
-                                <a href="https://wa.me/201097060751" className="blog-whatsapp-link">أو ابعتلنا على واتساب</a>
+                                <a href="https://wa.me/201041924242" className="blog-whatsapp-link">أو ابعتلنا على واتساب</a>
                             </aside>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BlogCard from "../../components/blog/BlogCard";
 import { articles, blogCategories } from "../../lib/blog";
-import { SITE_URL } from "../../lib/site";
+import { BRAND_NAME, SITE_URL } from "../../lib/site";
 
 const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
 const otherArticles = articles.filter((article) => article.slug !== featuredArticle.slug);
@@ -12,7 +12,7 @@ export const metadata = {
     description: "نصائح عملية لنقل العفش وتغليفه في القاهرة والجيزة: جهّز يوم النقل، اختار الونش المناسب، واحمِ أثاثك بخطوات واضحة.",
     alternates: { canonical: "/blog" },
     openGraph: {
-        title: "مدونة الونش | نصائح نقل الأثاث في مصر",
+        title: `مدونة ${BRAND_NAME} | نصائح نقل الأثاث في مصر`,
         description: "أدلة عملية تساعدك تخطط لنقل أثاثك وتحمي مقتنياتك.",
         url: `${SITE_URL}/blog`,
         images: [{ url: featuredArticle.image, alt: featuredArticle.imageAlt }],
@@ -21,7 +21,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "مدونة الونش | نصائح نقل الأثاث في مصر",
+        title: `مدونة ${BRAND_NAME} | نصائح نقل الأثاث في مصر`,
         description: "أدلة عملية تساعدك تخطط لنقل أثاثك وتحمي مقتنياتك.",
         images: [featuredArticle.image],
     },
@@ -31,13 +31,13 @@ export default function BlogPage() {
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "Blog",
-        name: "مدونة الونش لنقل وتغليف الأثاث",
+        name: `مدونة ${BRAND_NAME}`,
         description: metadata.description,
-        url: "/blog",
+        url: new URL("/blog", SITE_URL).toString(),
         inLanguage: "ar-EG",
         publisher: {
             "@type": "Organization",
-            name: "الونش لنقل وتغليف الأثاث",
+            name: BRAND_NAME,
             url: SITE_URL,
         },
     };
@@ -51,7 +51,7 @@ export default function BlogPage() {
             <div className="content-container">
                 <header className="blog-heading">
                     <span className="blog-eyebrow">دليل عملي لانتقال أهدى</span>
-                    <h1>مدونة الونش</h1>
+                    <h1>مدونة {BRAND_NAME}</h1>
                     <p>نصايح واضحة وتجارب عملية تساعدك تجهز لنقل بيتك وتحافظ على كل قطعة.</p>
                 </header>
 
@@ -88,7 +88,7 @@ export default function BlogPage() {
                         <section className="blog-category-section" id={category.slug} key={category.slug}>
                             <div className="blog-section-heading">
                                 <div>
-                                    <span className="blog-eyebrow">من دليل الونش</span>
+                                    <span className="blog-eyebrow">من دليل ايجي موف</span>
                                     <h2>{category.name}</h2>
                                 </div>
                                 <span>{categoryArticles.length} مقالات</span>

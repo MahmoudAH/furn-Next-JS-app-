@@ -1,7 +1,7 @@
 import { Rubik } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { SITE_URL } from "../lib/site";
+import { BRAND_NAME, SITE_URL } from "../lib/site";
 
 // Configure Rubik Google Font with Arabic subset and balanced weight hierarchy
 const rubik = Rubik({
@@ -13,35 +13,39 @@ const rubik = Rubik({
 
 export const metadata = {
     title: {
-        template: '%s | الونش لنقل وتغليف الأثاث',
-        default: 'الونش لنقل وتغليف الأثاث | نقل آمن للأثاث في مصر',
+        template: `%s | ${BRAND_NAME}`,
+        default: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
     },
-    description: 'الونش لنقل وتغليف الأثاث في القاهرة والجيزة. نقل منازل وشركات، تغليف احترافي، أوناش هيدروليكية، فك وتركيب، وسيارات نقل مجهزة.',
-    keywords: 'الونش, نقل عفش, نقل أثاث, ونش رفع أثاث, تغليف عفش, شركات نقل أثاث بالقاهرة, نقل عفش الجيزة, نقل أثاث مصر',
-    authors: [{ name: 'الونش لنقل وتغليف الأثاث' }],
+    description: `${BRAND_NAME} لنقل الأثاث والعفش في القاهرة والجيزة. خدمات نقل المنازل والمكاتب، التغليف، الفك والتركيب، ورفع الأثاث حسب احتياجك.`,
+    applicationName: BRAND_NAME,
+    authors: [{ name: BRAND_NAME }],
+    publisher: BRAND_NAME,
     metadataBase: new URL(SITE_URL),
     openGraph: {
-        title: 'الونش لنقل وتغليف الأثاث | نقل آمن ومحترف في مصر',
-        description: 'حلول نقل متكاملة، ونش هيدروليكي، فك وتركيب وتغليف آمن بأفضل الأسعار وأعلى معايير الأمان.',
-        url: 'https://furniture-moving-eg.com/',
-        siteName: 'الونش لنقل وتغليف الأثاث',
+        title: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
+        description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة.`,
+        siteName: BRAND_NAME,
+        locale: 'ar_EG',
+        type: 'website',
         images: [
             {
                 url: '/images/real/hoist/truck-lift-wide.jpeg',
-                alt: 'ونش هيدروليكي مجهز لرفع الأثاث في مصر',
+                alt: 'سيارة مجهزة لنقل الأثاث في مصر',
             },
         ],
-        locale: 'ar_EG',
-        type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'الونش لنقل وتغليف الأثاث',
-        description: 'خدمات نقل العفش بالقاهرة والجيزة مع تغليف احترافي، ونش رفع، وتأمين الأثاث.',
+        title: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
+        description: `${BRAND_NAME} لنقل الأثاث والعفش مع خدمات التغليف والفك والتركيب.`,
         images: ['/images/real/hoist/truck-lift-wide.jpeg'],
     },
+    robots: {
+        index: true,
+        follow: true,
+    },
     icons: {
-        icon: '/images/logo-alwensh-mini.svg',
+        icon: '/images/egy-move-brand.jpg',
     }
 };
 

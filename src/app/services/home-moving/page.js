@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
+import { createPageMetadata } from '../../../lib/site';
 
-export const metadata = {
-    title: 'نقل المنازل والشقق',
+export const metadata = createPageMetadata({
+    title: "نقل المنازل والشقق",
     description: 'خدمة نقل عفش المنازل والشقق والفلل بالقاهرة والجيزة والمحافظات. ونش هيدروليكي، فك وتركيب، وسيارات شحن مغلقة.',
-};
+    path: "/services/home-moving",
+    image: "/images/real/hoist/truck-lift-wide.jpeg",
+    imageAlt: "سيارة نقل مجهزة لخدمة نقل المنازل",
+});
 
 export default function HomeMovingService() {
     return (
@@ -47,13 +51,13 @@ export default function HomeMovingService() {
                                 </li>
                             </ul>
                             <div className="service-actions">
-                                <a href="https://wa.me/201097060751?text=مرحباً، أود حجز خدمة نقل المنزل" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                                <a href="https://wa.me/201041924242?text=مرحباً، أود حجز خدمة نقل المنزل" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
                                     <i className="fa-brands fa-whatsapp ml-1"></i>
                                     <span>حجز نقل منزلك عبر واتساب</span>
                                 </a>
-                                <a href="tel:01097060751" className="btn btn-primary">
+                                <a href="tel:01041924242" className="btn btn-primary">
                                     <i className="fa-solid fa-phone-volume ml-1"></i>
-                                    <span>01097060751</span>
+                                    <span>01041924242</span>
                                 </a>
                             </div>
                         </div>
@@ -96,7 +100,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     مثالية للشقق حتى 3 غرف نوم. تشمل سيارة مغلقة 4.5 متر، طاقم فنيين، فك وتركيب كامل، وتغليف أساسي شامل.
                                 </p>
-                                <a href="https://wa.me/201097060751?text=استفسار عن باقة القاهرة والجيزة" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة القاهرة والجيزة" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
                                     استفسر عن السعر
                                 </a>
                             </div>
@@ -109,7 +113,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     تشمل ونش رفع هيدروليكي للأدوار المرتفعة مع شاحنة مغلقة وفريق عمل كامل للتغليف بالبابل والكراتين وإعادة التركيب.
                                 </p>
-                                <a href="https://wa.me/201097060751?text=استفسار عن باقة الونش الهيدروليكي" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الونش الهيدروليكي" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">
                                     احجز مع الونش
                                 </a>
                             </div>
@@ -122,7 +126,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     نقل الشحنات الكبيرة والمسافات الطويلة بين القاهرة والإسكندرية والساحل والصعيد بسيارات شحن كبيرة ومتابعة مستمرة.
                                 </p>
-                                <a href="https://wa.me/201097060751?text=استفسار عن باقة الفلل والمحافظات" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الفلل والمحافظات" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
                                     استفسر عن السعر
                                 </a>
                             </div>

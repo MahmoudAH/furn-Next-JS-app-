@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import BrandLogo from "./BrandLogo";
 
 export default function Header() {
     const pathname = usePathname();
@@ -67,17 +68,17 @@ export default function Header() {
                                 <span>القاهرة والجيزة - مدينة نصر</span>
                             </span>
                             <span className="topbar-sep d-none d-lg-inline">|</span>
-                            <a href="mailto:khaledahmed24680@gmail.com" className="topbar-item d-none d-md-inline-flex">
+                            <a href="mailto:egymove@gmail.com" className="topbar-item d-none d-md-inline-flex">
                                 <i className="fa-regular fa-envelope"></i>
-                                <span>khaledahmed24680@gmail.com</span>
+                                <span>egymove@gmail.com</span>
                             </a>
                             <span className="topbar-sep d-none d-md-inline">|</span>
-                            <a href="tel:01097060751" className="topbar-item">
+                            <a href="tel:01041924242" className="topbar-item">
                                 <i className="fa-solid fa-phone-volume"></i>
-                                <span dir="ltr">01097060751</span>
+                                <span dir="ltr">01041924242</span>
                             </a>
                             <span className="topbar-sep">|</span>
-                            <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-item--wa">
+                            <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-item--wa">
                                 <i className="fa-brands fa-whatsapp"></i>
                                 <span>واتساب 24/7</span>
                             </a>
@@ -86,7 +87,7 @@ export default function Header() {
                         {/* Left in RTL: Social links & Trust status */}
                         <div className="topbar-meta-group">
                             <div className="topbar-socials d-none d-sm-inline-flex">
-                                <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                     <i className="fa-brands fa-whatsapp"></i>
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -98,7 +99,7 @@ export default function Header() {
                             </div>
                             <span className="topbar-trust-badge">
                                 <i className="fa-solid fa-shield-check"></i>
-                                <span>ضمان سلامة العفش 100%</span>
+                                <span>عناية بكل قطعة أثاث</span>
                             </span>
                         </div>
                     </div>
@@ -111,13 +112,7 @@ export default function Header() {
                     <nav className="navbar-nav-layout" aria-label="القائمة الرئيسية">
                         {/* 1. Right side in RTL: Brand Logo + Name */}
                         <Link href="/" className="navbar-brand-link">
-                            <img
-                                src="/images/logo-alwensh.svg"
-                                alt="الونش لنقل وتغليف الأثاث - نقل أثاثك على أصوله"
-                                className="navbar-brand-img"
-                                width="150"
-                                height="47"
-                            />
+                            <BrandLogo className="brand-logo" />
                         </Link>
 
                         {/* 2. Middle: Navigation Links (Clean plain text, NO icons) */}
@@ -184,19 +179,20 @@ export default function Header() {
 
                             <li>
                                 <Link
-                                    href="/blog"
-                                    className={`navbar-link-item${pathname.startsWith("/blog") ? " is-active" : ""}`}
+                                    href="/contact"
+                                    className={`navbar-link-item${pathname === "/contact" ? " is-active" : ""}`}
                                 >
-                                    المدونة
+                                    تواصل معنا
                                 </Link>
                             </li>
 
                             <li>
                                 <Link
-                                    href="/contact"
-                                    className={`navbar-link-item${pathname === "/contact" ? " is-active" : ""}`}
+                                    href="/blog"
+                                    className={`navbar-link-item navbar-link-item--blog${pathname.startsWith("/blog") ? " is-active" : ""}`}
                                 >
-                                    تواصل معنا
+                                    المدونة
+                                    <span className="navbar-blog-badge">جديد</span>
                                 </Link>
                             </li>
                         </ul>
@@ -204,7 +200,7 @@ export default function Header() {
                         {/* 3. Left side in RTL: Quick Action Buttons */}
                         <div className="navbar-actions-group">
                             <a
-                                href="https://wa.me/201097060751"
+                                href="https://wa.me/201041924242"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-whatsapp header-action-btn"
@@ -213,7 +209,7 @@ export default function Header() {
                                 <span>احجز بالواتساب</span>
                             </a>
                             <a
-                                href="tel:01097060751"
+                                href="tel:01041924242"
                                 className="btn btn-primary header-action-btn"
                             >
                                 <i className="fa-solid fa-phone-volume"></i>
@@ -260,20 +256,21 @@ export default function Header() {
                                 <Link href="/about" className={`mobile-link-item${pathname === "/about" ? " is-active" : ""}`}>
                                     من نحن
                                 </Link>
-                                <Link href="/blog" className={`mobile-link-item${pathname.startsWith("/blog") ? " is-active" : ""}`}>
-                                    المدونة
-                                </Link>
                                 <Link href="/contact" className={`mobile-link-item${pathname === "/contact" ? " is-active" : ""}`}>
                                     تواصل معنا
+                                </Link>
+                                <Link href="/blog" className={`mobile-link-item${pathname.startsWith("/blog") ? " is-active" : ""}`}>
+                                    المدونة
+                                    <span className="navbar-blog-badge">جديد</span>
                                 </Link>
                             </nav>
 
                             <div className="mobile-actions-panel">
-                                <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
+                                <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
                                     <i className="fa-brands fa-whatsapp"></i>
                                     <span>محادثة واتساب فورية</span>
                                 </a>
-                                <a href="tel:01097060751" className="btn btn-primary w-100">
+                                <a href="tel:01041924242" className="btn btn-primary w-100">
                                     <i className="fa-solid fa-phone"></i>
                                     <span>اتصال هاتفي مباشر</span>
                                 </a>

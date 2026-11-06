@@ -1,1 +1,1 @@
-The Al-Wensh full image wordmark combines the moving-truck emblem, Arabic brand name, and tagline. Use /images/logo-alwensh.svg on light backgrounds, /images/logo-alwensh-footer.svg on dark backgrounds, and /images/logo-alwensh-mini.svg for the favicon.
+The Egy Move website header and footer use /images/egy-move-horizontal.jpg. The favicon uses /images/egy-move-brand.jpg, the square version of the Arabic wordmark and moving-services emblem.

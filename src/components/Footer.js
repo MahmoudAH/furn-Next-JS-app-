@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -11,19 +12,13 @@ export default function Footer() {
                         {/* 1. About the Brand */}
                         <div className="footer-col-about">
                             <div className="footer-brand-header">
-                                <img
-                                    src="/images/logo-alwensh-footer.svg"
-                                    alt="الونش لنقل وتغليف الأثاث - نقل أثاثك على أصوله"
-                                    className="footer-brand-icon"
-                                    width="180"
-                                    height="46"
-                                />
+                                <BrandLogo className="brand-logo" />
                             </div>
                             <p className="footer-about-text">
-                                الشركة الرائدة في خدمات نقل وتغليف وتخزين الأثاث داخل مصر. نعتمد على أحدث أوناش رفع العفش الهيدروليكية، وسيارات صندوقية مغلقة، وفريق فني محترف في فك وتركيب جميع أنواع غرف النوم والمطابخ.
+                                ايجي موف لخدمات نقل الأثاث والعفش في القاهرة والجيزة. نساعدك في تخطيط النقل، تغليف الأثاث، والفك والتركيب وفق تفاصيل كل عملية.
                             </p>
                             <div className="footer-social-strip">
-                                <a href="https://wa.me/201097060751" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
+                                <a href="https://wa.me/201041924242" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
                                     <i className="fa-brands fa-whatsapp"></i>
                                 </a>
                                 <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
@@ -32,7 +27,7 @@ export default function Footer() {
                                 <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
                                     <i className="fa-brands fa-instagram"></i>
                                 </a>
-                                <a href="tel:01097060751" aria-label="Phone" className="footer-social-btn">
+                                <a href="tel:01041924242" aria-label="Phone" className="footer-social-btn">
                                     <i className="fa-solid fa-phone"></i>
                                 </a>
                             </div>
@@ -59,7 +54,7 @@ export default function Footer() {
                                 <li><Link href="/blog">المدونة</Link></li>
                                 <li><Link href="/contact">طلب معاينة مجانية</Link></li>
                                 <li><Link href="/contact">تواصل مع الإدارة</Link></li>
-                                <li><a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer">دردشة واتساب مباشرة</a></li>
+                                <li><a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer">دردشة واتساب مباشرة</a></li>
                             </ul>
                         </div>
 
@@ -71,23 +66,16 @@ export default function Footer() {
                                     <i className="fa-solid fa-phone-volume"></i>
                                     <div>
                                         <span className="contact-label">خدمة العملاء والحجوزات</span>
-                                        <a href="tel:01097060751" className="contact-val">01097060751</a> / <a href="tel:01202750832" className="contact-val">01202750832</a>
+                                        <a href="tel:01041924242" className="contact-val">01041924242</a>
                                     </div>
                                 </li>
                                 <li className="footer-contact-entry">
                                     <i className="fa-brands fa-whatsapp"></i>
                                     <div>
                                         <span className="contact-label">واتساب الاستفسارات والأسعار</span>
-                                        <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="contact-val">
+                                        <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" className="contact-val">
                                             إرسال صور العفش لعرض السعر
                                         </a>
-                                    </div>
-                                </li>
-                                <li className="footer-contact-entry">
-                                    <i className="fa-solid fa-location-dot"></i>
-                                    <div>
-                                        <span className="contact-label">المقر الرئيسي</span>
-                                        <span className="contact-text">القاهرة - مدينة نصر، شارع محمد حسنين هيكل</span>
                                     </div>
                                 </li>
                                 <li className="footer-contact-entry">
@@ -105,10 +93,10 @@ export default function Footer() {
 
                     <div className="footer-bottom-row">
                         <p className="footer-copy-text">
-                            © {currentYear} شركة الونش لنقل وتغليف الأثاث. جميع الحقوق محفوظة.
+                            © {currentYear} ايجي موف لنقل الأثاث. جميع الحقوق محفوظة.
                         </p>
                         <p className="footer-coverage-text">
-                            أسرع وأأمن خدمات نقل العفش في القاهرة والجيزة وجميع محافظات مصر.
+                            خدمات نقل الأثاث والعفش في القاهرة والجيزة.
                         </p>
                     </div>
                 </div>
@@ -118,7 +106,7 @@ export default function Footer() {
             <div className="mobile-bottom-quickbar">
                 <div className="mobile-quickbar-grid">
                     <a
-                        href="https://wa.me/201097060751?text=مرحباً، أود معرفة أسعار نقل العفش"
+                        href="https://wa.me/201041924242?text=مرحباً، أود معرفة أسعار نقل العفش"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-whatsapp quickbar-btn"
@@ -127,7 +115,7 @@ export default function Footer() {
                         <span>واتساب فوري</span>
                     </a>
                     <a
-                        href="tel:01097060751"
+                        href="tel:01041924242"
                         className="btn btn-primary quickbar-btn"
                     >
                         <i className="fa-solid fa-phone-volume"></i>

@@ -110,8 +110,7 @@ export default function Contact() {
                                         </span>
                                         <div className="contact-info-copy">
                                             <strong>أرقام خدمة العملاء</strong>
-                                            <p className="mb-0"><a href="tel:01097060751" className="fw-bold text-dark">01097060751</a></p>
-                                            <p className="mb-0"><a href="tel:01202750832" className="fw-bold text-dark">01202750832</a></p>
+                                            <p className="mb-0"><a href="tel:01041924242" className="fw-bold text-dark">01041924242</a></p>
                                         </div>
                                     </div>
 
@@ -120,9 +119,9 @@ export default function Contact() {
                                             <i className="fa-brands fa-whatsapp"></i>
                                         </span>
                                         <div className="contact-info-copy">
-                                            <strong>واتساب الونش</strong>
+                                            <strong>واتساب ايجي موف</strong>
                                             <p className="mb-0 text-muted">إرسال الصور والفيديوهات لتقييم السعر</p>
-                                            <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="fw-bold text-primary">
+                                            <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" className="fw-bold text-primary">
                                                 تواصل عبر واتساب فوراً
                                             </a>
                                         </div>

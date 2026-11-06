@@ -13,9 +13,9 @@ export default function HeroCarousel() {
             badge: "خدمات نقل أثاث في القاهرة والجيزة",
             title: "نقل وتغليف أثاث منزلك بعناية واحترافية",
             desc: "فريق متخصص لفك وتغليف وتحميل الأثاث، مع عناية بكل قطعة من بداية النقل حتى التركيب.",
-            primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن نقل العفش",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن نقل العفش",
             primaryText: "احجز زيارة مجانية الآن",
-            phone: "01097060751",
+            phone: "01041924242",
         },
         {
             image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa.png",
@@ -23,9 +23,9 @@ export default function HeroCarousel() {
             badge: "خامات تغليف عالية الجودة",
             title: "تغليف احترافي متعدد الطبقات يحمي مقتنياتك من أي خدش",
             desc: "كراتين مقواة، بابل راب هوائي، بطاطين مبطنة، وتغليف استريتش حراري لحماية الأجهزة والزجاج والأنتيكات.",
-            primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن خدمة التغليف",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن خدمة التغليف",
             primaryText: "اطلب باقة التغليف المتكاملة",
-            phone: "01097060751",
+            phone: "01041924242",
         },
         {
             image: "/images/Professional%20Movers%20Packing%20a%20Bright%20Apartment-3.png",
@@ -33,9 +33,9 @@ export default function HeroCarousel() {
             badge: "شاحنات مجهزة لنقل آمن",
             title: "أوناش هيدروليكية تصل للأدوار المرتفعة وسيارات نقل مغلقة",
             desc: "شاحنات صندوقية مجهزة بالداخل ومبطنة لحماية العفش أثناء المطبات، مع أوناش هيدروليكية للأدوار العليا الضيقة.",
-            primaryLink: "https://wa.me/201097060751?text=مرحباً، أريد ونش رفع عفش",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد ونش رفع عفش",
             primaryText: "احجز الونش الهيدروليكي",
-            phone: "01202750832",
+            phone: "01041924242",
         }
     ];
 
@@ -56,7 +56,7 @@ export default function HeroCarousel() {
     return (
         <section
             className="hero-banner-section content-container"
-            aria-label="أبرز خدمات الونش لنقل الأثاث"
+            aria-label="أبرز خدمات ايجي موف لنقل الأثاث"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >

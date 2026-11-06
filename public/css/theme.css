@@ -3,7 +3,7 @@
    ========================================================================== */
 
 :root {
-  /* Al-Wensh navy and amber palette */
+  /* Egy Move navy and amber palette */
   --clr-primary-50:  #f2f5f8;
   --clr-primary-100: #e5eaf0;
   --clr-primary-200: #cbd4df;
@@ -313,6 +313,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   width: 100%;
   gap: 1.5rem;
+  flex-wrap: nowrap;
 }
 
 .navbar-brand-link {
@@ -323,10 +324,11 @@ img { max-width: 100%; height: auto; display: block; }
   text-decoration: none;
 }
 .navbar-brand-link:hover { text-decoration: none; }
-.navbar-brand-img {
-  width: 150px;
-  height: 47px;
-  object-fit: contain;
+.brand-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 190px;
+  height: 60px;
 }
 
 .navbar-menu-list {
@@ -343,6 +345,7 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
   gap: .35rem;
   padding: .5rem 1.15rem;
+  white-space: nowrap;
   font-size: var(--type-small);
   font-weight: 600;
   color: var(--clr-neutral-700);
@@ -355,6 +358,26 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--clr-primary-700) !important;
   background: var(--clr-primary-50) !important;
   font-weight: 700;
+}
+.navbar-link-item--blog { position: relative; }
+.navbar-link-item--blog .navbar-blog-badge {
+  position: absolute;
+  top: -.3rem;
+  left: .55rem;
+  z-index: 1;
+}
+.navbar-blog-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .18rem .38rem;
+  border-radius: var(--r-pill);
+  background: #e60012;
+  color: #fff;
+  font-size: .55rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .navbar-link-item--btn {
@@ -1956,10 +1979,10 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .footer-brand-header {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  width: fit-content;
+  gap: .65rem;
   margin-bottom: 1rem;
 }
-.footer-brand-icon { width: 180px; height: 46px; object-fit: contain; }
 .footer-about-text {
   font-size: var(--type-body);
   line-height: var(--leading-body);
@@ -2069,6 +2092,13 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-nav-layout { gap: .5rem; }
+  .navbar-link-item { padding-inline: .55rem; }
+  .navbar-actions-group { gap: .5rem; }
+  .header-action-btn { padding-inline: .7rem; }
+}
+
 @media (max-width: 991px) {
   .navbar-menu-list     { display: none !important; }
   .navbar-actions-group { display: none !important; }
@@ -2103,9 +2133,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   }
 
   .header-topbar { display: none; }
-  .navbar-brand-img { width: 132px; height: 42px; }
-  .footer-brand-icon { width: 165px; height: 43px; }
-
+  .brand-logo { width: 155px; height: 49px; }
   .hero-banner-section {
     padding-top: .75rem;
     padding-bottom: 1.25rem;

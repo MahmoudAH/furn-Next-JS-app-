@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
+import { createPageMetadata } from '../../../lib/site';
 
-export const metadata = {
-    title: 'تغليف الأثاث الاحترافي',
+export const metadata = createPageMetadata({
+    title: "تغليف الأثاث الاحترافي",
     description: 'خدمات تغليف عفش وأثاث منزلي بالبابل راب، الكراتين المقواة، والبطاطين السميكة لحماية غرف النوم والزجاج والأجهزة الكهربائية.',
-};
+    path: "/services/pro-packing",
+    image: "/images/real/packing/team-wrapping.jpeg",
+    imageAlt: "فريق يغلّف الأثاث لحمايته أثناء النقل",
+});
 
 export default function ProPackingService() {
     return (
@@ -47,13 +51,13 @@ export default function ProPackingService() {
                                 </li>
                             </ul>
                             <div className="service-actions">
-                                <a href="https://wa.me/201097060751?text=مرحباً، أريد الاستفسار عن خدمة تغليف الأثاث" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                                <a href="https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن خدمة تغليف الأثاث" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
                                     <i className="fa-brands fa-whatsapp ml-1"></i>
                                     <span>طلب معاينة التغليف</span>
                                 </a>
-                                <a href="tel:01097060751" className="btn btn-outline-primary">
+                                <a href="tel:01041924242" className="btn btn-outline-primary">
                                     <i className="fa-solid fa-phone ml-1"></i>
-                                    <span>01097060751</span>
+                                    <span>01041924242</span>
                                 </a>
                             </div>
                         </div>

@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import PageBanner from '../../../components/PageBanner';
+import { BRAND_NAME, createPageMetadata } from '../../../lib/site';
 
-export const metadata = {
-    title: 'حلول الشركات والمكاتب',
+export const metadata = createPageMetadata({
+    title: "حلول الشركات والمكاتب",
     description: 'نقل مقرات الشركات، المكاتب الإدارية، المعارض التجارية، وغرف السيرفرات باحترافية عالية وجداول زمنية مرنة تقلل فترات التوقف.',
-};
+    path: "/services/business-relocation",
+    image: "/images/real/fleet/moving-trucks.jpeg",
+    imageAlt: "سيارات مجهزة لنقل الأثاث والمكاتب",
+});
 
 export default function BusinessRelocationService() {
     return (
@@ -30,7 +34,7 @@ export default function BusinessRelocationService() {
                                 نقل مقرات الشركات والمكاتب دون تعطيل سير العمل
                             </h2>
                             <p className="lead-text">
-                                ندرك في الونش أن كل ساعة توقف في الشركة تعني تكلفة. لذلك نوفر خطط نقل مرنة خلال العطلات الأسبوعية أو الفترات المسائية مع إشراف هندسي وتنفيذي دقيق.
+                                تدرك {BRAND_NAME} أهمية تقليل توقف العمل أثناء الانتقال؛ لذلك ننسق تفاصيل نقل المكاتب مع فريقك ونحدد خطة مناسبة لطبيعة الموقع والجدول المتاح.
                             </p>
                             <ul className="list-unstyled mt-4" style={{ color: "var(--clr-neutral-700)" }}>
                                 <li className="mb-3 d-flex align-items-center gap-2">
@@ -47,13 +51,13 @@ export default function BusinessRelocationService() {
                                 </li>
                             </ul>
                             <div className="service-actions">
-                                <a href="https://wa.me/201097060751?text=مرحباً، أود التنسيق لنقل مقر شركة" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                                <a href="https://wa.me/201041924242?text=مرحباً، أود التنسيق لنقل مقر شركة" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
                                     <i className="fa-brands fa-whatsapp ml-1"></i>
                                     <span>طلب عرض سعر للشركات</span>
                                 </a>
-                                <a href="tel:01202750832" className="btn btn-primary">
+                                <a href="tel:01041924242" className="btn btn-primary">
                                     <i className="fa-solid fa-phone ml-1"></i>
-                                    <span>01202750832 (مدير المشروعات)</span>
+                                    <span>01041924242</span>
                                 </a>
                             </div>
                         </div>
