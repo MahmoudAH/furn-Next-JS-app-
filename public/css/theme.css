@@ -170,17 +170,31 @@ img { max-width: 100%; height: auto; display: block; }
   white-space: nowrap;
 }
 
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--clr-accent-400);
+  outline-offset: 3px;
+}
+
+.btn:disabled,
+.btn.disabled {
+  cursor: not-allowed;
+  opacity: .65;
+  transform: none;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--clr-primary-600), var(--clr-primary-800));
   color: #fff !important;
   border-color: var(--clr-primary-700);
-  box-shadow: 0 4px 12px rgba(13,95,89,.25);
+  box-shadow: 0 4px 12px rgba(20,40,64,.25);
 }
 .btn-primary:hover, .btn-primary:focus {
   background: linear-gradient(135deg, var(--clr-primary-700), var(--clr-primary-900));
   color: #fff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(13,95,89,.35);
+  box-shadow: 0 6px 18px rgba(16,30,48,.35);
 }
 
 .btn-whatsapp {
@@ -722,17 +736,36 @@ img { max-width: 100%; height: auto; display: block; }
   gap: .5rem;
 }
 .hero-pagi-dot {
-  width: 8px;
-  height: 8px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--r-pill);
-  background: rgba(20, 40, 64, 0.35);
-  border: none;
+  background: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   transition: all var(--ease-fast);
   padding: 0;
+  position: relative;
+}
+.hero-pagi-dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: rgba(20, 40, 64, 0.65);
+  display: block;
+  margin: auto;
+  transition: all var(--ease-fast);
+}
+.hero-pagi-dot:focus-visible {
+  outline: 3px solid var(--clr-accent-400);
+  outline-offset: 1px;
 }
 .hero-pagi-dot.is-active {
-  width: 28px;
+  width: 32px;
+  background: transparent;
+}
+.hero-pagi-dot.is-active::after {
+  width: 24px;
   background: var(--clr-accent-500);
 }
 
@@ -1951,7 +1984,7 @@ img { max-width: 100%; height: auto; display: block; }
 .form-control:focus {
   outline: none;
   border-color: var(--clr-primary-500);
-  box-shadow: 0 0 0 3px rgba(13,95,89,.14);
+  box-shadow: 0 0 0 3px rgba(37,70,102,.14);
 }
 .form-control::placeholder { color: var(--clr-neutral-400); }
 textarea.form-control { resize: vertical; min-height: 120px; }

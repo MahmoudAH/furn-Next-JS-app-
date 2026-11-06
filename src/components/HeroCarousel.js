@@ -99,7 +99,7 @@ export default function HeroCarousel() {
                                                 href={slide.primaryLink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="btn btn-primary hero-btn"
+                                                className="btn btn-whatsapp hero-btn"
                                             >
                                                 <i className="fa-brands fa-whatsapp"></i>
                                                 <span>{slide.primaryText}</span>

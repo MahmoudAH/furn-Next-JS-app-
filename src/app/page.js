@@ -232,7 +232,7 @@ export default function Home() {
                                 href="https://wa.me/201041924242?text=مرحباً، أود الاستفسار عن خدمات نقل الأثاث"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="btn btn-primary"
+                                className="btn btn-whatsapp"
                             >
                                 <i className="fa-brands fa-whatsapp ml-1"></i>
                                 <span>اطلب عرض سعر</span>

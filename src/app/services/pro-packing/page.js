@@ -55,7 +55,7 @@ export default function ProPackingService() {
                                     <i className="fa-brands fa-whatsapp ml-1"></i>
                                     <span>طلب معاينة التغليف</span>
                                 </a>
-                                <a href="tel:01041924242" className="btn btn-outline-primary">
+                                <a href="tel:01041924242" className="btn btn-primary">
                                     <i className="fa-solid fa-phone ml-1"></i>
                                     <span>01041924242</span>
                                 </a>

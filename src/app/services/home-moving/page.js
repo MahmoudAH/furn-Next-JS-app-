@@ -100,7 +100,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     مثالية للشقق حتى 3 غرف نوم. تشمل سيارة مغلقة 4.5 متر، طاقم فنيين، فك وتركيب كامل، وتغليف أساسي شامل.
                                 </p>
-                                <a href="https://wa.me/201041924242?text=استفسار عن باقة القاهرة والجيزة" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة القاهرة والجيزة" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
                                     استفسر عن السعر
                                 </a>
                             </div>
@@ -113,7 +113,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     تشمل ونش رفع هيدروليكي للأدوار المرتفعة مع شاحنة مغلقة وفريق عمل كامل للتغليف بالبابل والكراتين وإعادة التركيب.
                                 </p>
-                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الونش الهيدروليكي" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الونش الهيدروليكي" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
                                     احجز مع الونش
                                 </a>
                             </div>
@@ -126,7 +126,7 @@ export default function HomeMovingService() {
                                 <p className="text-muted mb-4">
                                     نقل الشحنات الكبيرة والمسافات الطويلة بين القاهرة والإسكندرية والساحل والصعيد بسيارات شحن كبيرة ومتابعة مستمرة.
                                 </p>
-                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الفلل والمحافظات" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة الفلل والمحافظات" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
                                     استفسر عن السعر
                                 </a>
                             </div>
