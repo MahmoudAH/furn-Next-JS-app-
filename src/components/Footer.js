@@ -15,17 +15,11 @@ export default function Footer() {
                                 <BrandLogo className="brand-logo" />
                             </div>
                             <p className="footer-about-text">
-                                ايجي موف لخدمات نقل الأثاث والعفش في القاهرة والجيزة. نساعدك في تخطيط النقل، تغليف الأثاث، والفك والتركيب وفق تفاصيل كل عملية.
+                                ايجي موف لخدمات نقل الأثاث والعفش في القاهرة والجيزة وجميع المحافظات. نساعدك في تخطيط النقل، تغليف الأثاث، والفك والتركيب وفق تفاصيل كل عملية.
                             </p>
                             <div className="footer-social-strip">
                                 <a href="https://wa.me/201041924242" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
                                     <i className="fa-brands fa-whatsapp"></i>
-                                </a>
-                                <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
-                                    <i className="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="footer-social-btn">
-                                    <i className="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="tel:01041924242" aria-label="Phone" className="footer-social-btn">
                                     <i className="fa-solid fa-phone"></i>
@@ -96,7 +90,7 @@ export default function Footer() {
                             © {currentYear} ايجي موف لنقل الأثاث. جميع الحقوق محفوظة.
                         </p>
                         <p className="footer-coverage-text">
-                            خدمات نقل الأثاث والعفش في القاهرة والجيزة.
+                            خدمات نقل الأثاث والعفش في القاهرة والجيزة وجميع المحافظات.
                         </p>
                     </div>
                 </div>
@@ -122,6 +116,27 @@ export default function Footer() {
                         <span>اتصل بنا</span>
                     </a>
                 </div>
+            </div>
+
+            <div className="floating-contact-actions" aria-label="تواصل سريع">
+                <a
+                    href="https://wa.me/201041924242?text=مرحباً، أود معرفة أسعار نقل العفش"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="floating-contact-action floating-contact-action--whatsapp"
+                    aria-label="تواصل معنا عبر واتساب"
+                    title="واتساب"
+                >
+                    <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="tel:01041924242"
+                    className="floating-contact-action floating-contact-action--phone"
+                    aria-label="اتصل بنا"
+                    title="اتصل بنا"
+                >
+                    <i className="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                </a>
             </div>
         </>
     );

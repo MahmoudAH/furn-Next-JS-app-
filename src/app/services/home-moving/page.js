@@ -4,7 +4,7 @@ import { createPageMetadata } from '../../../lib/site';
 
 export const metadata = createPageMetadata({
     title: "نقل المنازل والشقق",
-    description: 'خدمة نقل عفش المنازل والشقق والفلل بالقاهرة والجيزة والمحافظات. ونش هيدروليكي، فك وتركيب، وسيارات شحن مغلقة.',
+    description: 'خدمة نقل عفش المنازل والشقق والفلل بالقاهرة والجيزة وجميع المحافظات. ونش هيدروليكي، فك وتركيب، وسيارات شحن مغلقة.',
     path: "/services/home-moving",
     image: "/images/real/hoist/truck-lift-wide.jpeg",
     imageAlt: "سيارة نقل مجهزة لخدمة نقل المنازل",
@@ -96,11 +96,11 @@ export default function HomeMovingService() {
                         <div className="col-md-4">
                             <div className="surface-card h-100" style={{ padding: "2rem" }}>
                                 <span className="badge" style={{ background: "var(--clr-primary-50)", color: "var(--clr-primary-700)", border: "1px solid var(--clr-primary-200)", borderRadius: "999px", padding: "0.3rem 0.8rem", marginBottom: "1rem", display: "inline-block", fontWeight: 700 }}>باقة الشقق المتوسطة</span>
-                                <h3 className="h4 fw-bold mb-3">باقة القاهرة والجيزة</h3>
+                                <h3 className="h4 fw-bold mb-3">باقة القاهرة والجيزة وجميع المحافظات</h3>
                                 <p className="text-muted mb-4">
                                     مثالية للشقق حتى 3 غرف نوم. تشمل سيارة مغلقة 4.5 متر، طاقم فنيين، فك وتركيب كامل، وتغليف أساسي شامل.
                                 </p>
-                                <a href="https://wa.me/201041924242?text=استفسار عن باقة القاهرة والجيزة" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
+                                <a href="https://wa.me/201041924242?text=استفسار عن باقة القاهرة والجيزة وجميع المحافظات" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp w-100">
                                     استفسر عن السعر
                                 </a>
                             </div>

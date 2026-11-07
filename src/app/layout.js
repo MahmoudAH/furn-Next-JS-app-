@@ -14,16 +14,16 @@ const rubik = Rubik({
 export const metadata = {
     title: {
         template: `%s | ${BRAND_NAME}`,
-        default: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
+        default: `نقل عفش في القاهرة والجيزة وجميع المحافظات | ${BRAND_NAME}`,
     },
-    description: `${BRAND_NAME} لنقل الأثاث والعفش في القاهرة والجيزة. خدمات نقل المنازل والمكاتب، التغليف، الفك والتركيب، ورفع الأثاث حسب احتياجك.`,
+    description: `${BRAND_NAME} لنقل الأثاث والعفش في القاهرة والجيزة وجميع المحافظات. خدمات نقل المنازل والمكاتب، التغليف، الفك والتركيب، ورفع الأثاث حسب احتياجك.`,
     applicationName: BRAND_NAME,
     authors: [{ name: BRAND_NAME }],
     publisher: BRAND_NAME,
     metadataBase: new URL(SITE_URL),
     openGraph: {
-        title: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
-        description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة.`,
+        title: `نقل عفش في القاهرة والجيزة وجميع المحافظات | ${BRAND_NAME}`,
+        description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة وجميع المحافظات.`,
         siteName: BRAND_NAME,
         locale: 'ar_EG',
         type: 'website',
@@ -36,7 +36,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: `نقل عفش في القاهرة والجيزة | ${BRAND_NAME}`,
+        title: `نقل عفش في القاهرة والجيزة وجميع المحافظات | ${BRAND_NAME}`,
         description: `${BRAND_NAME} لنقل الأثاث والعفش مع خدمات التغليف والفك والتركيب.`,
         images: ['/images/real/hoist/truck-lift-wide.jpeg'],
     },
@@ -60,12 +60,19 @@ export default function RootLayout({ children }) {
     return (
         <html lang="ar" dir="rtl" className={rubik.variable}>
             <head>
+                <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
                 {/* Bootstrap base grid & layout */}
                 <link rel="stylesheet" href="/css/app.css" />
                 {/* Modern design tokens & components */}
                 <link rel="stylesheet" href="/css/theme.css" />
                 {/* Font Awesome 6 */}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                    integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
+                    crossOrigin="anonymous"
+                    referrerPolicy="no-referrer"
+                />
             </head>
             <body style={{ fontFamily: "var(--font-rubik), 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
                 <div id="app" className="min-vh-100 d-flex flex-column">

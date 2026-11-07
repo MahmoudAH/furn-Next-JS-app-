@@ -4,7 +4,7 @@ import { BRAND_NAME, createPageMetadata } from '../../lib/site';
 
 export const metadata = createPageMetadata({
     title: "من نحن",
-    description: `تعرف على ${BRAND_NAME} وخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة.`,
+    description: `تعرف على ${BRAND_NAME} وخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة وجميع المحافظات.`,
     path: "/about",
     imageAlt: "فريق نقل أثاث يعمل بعناية",
 });
@@ -14,11 +14,11 @@ export default function About() {
         <>
             {/* Consistent Internal Page Banner */}
             <PageBanner
-                tag="خدمات نقل الأثاث في القاهرة والجيزة"
+                tag="خدمات نقل الأثاث في القاهرة والجيزة وجميع المحافظات"
                 title={`من نحن - ${BRAND_NAME} لنقل الأثاث`}
-                subtitle={`${BRAND_NAME} تساعد الأسر والشركات على تخطيط نقل الأثاث والعفش بعناية في القاهرة والجيزة.`}
+                subtitle={`${BRAND_NAME} تساعد الأسر والشركات على تخطيط نقل الأثاث والعفش بعناية في القاهرة والجيزة وجميع المحافظات.`}
                 breadcrumb="من نحن"
-                image="/images/about-moving-banner.svg"
+                image="/images/real/fleet/moving-trucks.jpeg"
             />
 
             <div className="content-container section pt-0">
@@ -44,7 +44,7 @@ export default function About() {
 
                         <div className="col-lg-6">
                             <img 
-                                src="/images/about-careful-moving.svg"
+                                src="/images/real/packing/wrapped-sofas.jpeg"
                                 alt="فريق متخصص يحمل كنبة مغلفة بعناية إلى المنزل الجديد"
                                 className="img-fluid" 
                                 style={{ 

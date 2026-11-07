@@ -9,7 +9,7 @@ const otherArticles = articles.filter((article) => article.slug !== featuredArti
 
 export const metadata = {
     title: "مدونة نقل الأثاث والتغليف في مصر",
-    description: "نصائح عملية لنقل العفش وتغليفه في القاهرة والجيزة: جهّز يوم النقل، اختار الونش المناسب، واحمِ أثاثك بخطوات واضحة.",
+    description: "نصائح عملية لنقل العفش وتغليفه في القاهرة والجيزة وجميع المحافظات: جهّز يوم النقل، اختار الونش المناسب، واحمِ أثاثك بخطوات واضحة.",
     alternates: { canonical: "/blog" },
     openGraph: {
         title: `مدونة ${BRAND_NAME} | نصائح نقل الأثاث في مصر`,

@@ -31,7 +31,7 @@ export default function Contact() {
                 title="تواصل معنا - حجز ومعاينة مجانية"
                 subtitle="فريق الدعم الفني جاهز للرد على كافة استفساراتكم وتحديد الموعد الأنسب للمعاينة والنقل."
                 breadcrumb="تواصل معنا"
-                image="/images/contact-moving-banner.svg"
+                image="/images/real/packing/team-wrapping.jpeg"
             />
 
             <div className="content-container section pt-0">
@@ -129,17 +129,6 @@ export default function Contact() {
 
                                     <div className="contact-info-entry">
                                         <span className="icon-circle contact-info-icon">
-                                            <i className="fa-solid fa-location-dot"></i>
-                                        </span>
-                                        <div className="contact-info-copy">
-                                            <strong>المقر الرئيسي</strong>
-                                            <p className="mb-0 text-muted">القاهرة - مدينة نصر، شارع محمد حسنين هيكل</p>
-                                            <span className="badge bg-light text-dark border mt-1">نغطي كافة أحياء القاهرة والجيزة</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="contact-info-entry">
-                                        <span className="icon-circle contact-info-icon">
                                             <i className="fa-solid fa-clock"></i>
                                         </span>
                                         <div className="contact-info-copy">
@@ -157,7 +146,7 @@ export default function Contact() {
                                     <span>معاينة مجانية بدون أي التزام</span>
                                 </div>
                                 <p className="contact-assurance-text">
-                                    نرسل لك مندوباً لمعاينة العفش وتحديد أفضل مسار لنزول الونش مجاناً داخل القاهرة والجيزة.
+                                    نرسل لك مندوباً لمعاينة العفش وتحديد أفضل مسار لنزول الونش مجاناً في القاهرة والجيزة وجميع المحافظات.
                                 </p>
                             </div>
                         </div>

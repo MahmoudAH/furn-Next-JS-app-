@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroCarousel from '../components/HeroCarousel';
 import { BRAND_NAME, BRAND_NAME_EN, SITE_URL, createPageMetadata } from '../lib/site';
 
 export const metadata = createPageMetadata({
-    title: "نقل عفش بالقاهرة والجيزة",
-    description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش في القاهرة والجيزة. تعرّف على خدمات نقل المنازل والمكاتب، التغليف، والفك والتركيب واطلب عرض سعر.`,
+    title: "نقل عفش بالقاهرة والجيزة وجميع المحافظات",
+    description: `${BRAND_NAME} لخدمات نقل الأثاث والعفش في القاهرة والجيزة وجميع المحافظات. تعرّف على خدمات نقل المنازل والمكاتب، التغليف، والفك والتركيب واطلب عرض سعر.`,
     path: "/",
     image: "/images/real/hoist/truck-lift-wide.jpeg",
     imageAlt: "سيارة مجهزة لنقل الأثاث في مصر",
@@ -34,7 +35,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعيد تركيب أثاث غرفة النوم" loading="eager" />
+                                <Image src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعيد تركيب أثاث غرفة النوم" width={613} height={500} sizes="(max-width: 768px) 100vw, 33vw" />
                                 <span className="feature-overlay">ونش هيدروليكي حتى الدور 18</span>
                             </div>
                             <div className="card-body">
@@ -52,7 +53,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/real/packing/team-wrapping.jpeg" alt="فريق يغلّف قطعة أثاث لحمايتها أثناء النقل" loading="eager" />
+                                <Image src="/images/real/packing/team-wrapping.jpeg" alt="فريق يغلّف قطعة أثاث لحمايتها أثناء النقل" width={718} height={520} sizes="(max-width: 768px) 100vw, 33vw" />
                                 <span className="feature-overlay">خامات تغليف ألمانية</span>
                             </div>
                             <div className="card-body">
@@ -70,7 +71,7 @@ export default function Home() {
                     <div className="col-md-6 col-lg-4">
                         <article className="feature-card">
                             <div className="feature-visual">
-                                <img src="/images/real/hoist/truck-lift-wide.jpeg" alt="ونش هيدروليكي يساعد على رفع الأثاث بأمان" loading="eager" />
+                                <Image src="/images/real/hoist/truck-lift-wide.jpeg" alt="ونش هيدروليكي يساعد على رفع الأثاث بأمان" width={1280} height={720} sizes="(max-width: 768px) 100vw, 33vw" />
                                 <span className="feature-overlay">سيارات صندوقية مبطنة</span>
                             </div>
                             <div className="card-body">
@@ -167,7 +168,7 @@ export default function Home() {
                     <div className="gallery-grid">
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/real/packing/wrapped-sofas.jpeg" alt="أرائك مغلفة لحمايتها قبل نقلها" loading="eager" />
+                                <Image src="/images/real/packing/wrapped-sofas.jpeg" alt="أرائك مغلفة لحمايتها قبل نقلها" width={720} height={1280} sizes="(max-width: 768px) 100vw, 25vw" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-shield-halved ml-1"></i> تغليف آمن</span>
                             </div>
                             <figcaption>
@@ -178,7 +179,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/real/hoist/building-lift.jpeg" alt="ونش هيدروليكي يرفع الأثاث إلى طابق مرتفع" loading="eager" />
+                                <Image src="/images/real/hoist/building-lift.jpeg" alt="ونش هيدروليكي يرفع الأثاث إلى طابق مرتفع" width={1204} height={1600} sizes="(max-width: 768px) 100vw, 25vw" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-up-long ml-1"></i> ونش هيدروليكي</span>
                             </div>
                             <figcaption>
@@ -189,7 +190,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/real/packing/wrapped-appliances.jpeg" alt="أجهزة منزلية مغلفة لحمايتها أثناء النقل" loading="eager" />
+                                <Image src="/images/real/packing/wrapped-appliances.jpeg" alt="أجهزة منزلية مغلفة لحمايتها أثناء النقل" width={720} height={1280} sizes="(max-width: 768px) 100vw, 25vw" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-box ml-1"></i> صناديق مقواة</span>
                             </div>
                             <figcaption>
@@ -200,7 +201,7 @@ export default function Home() {
 
                         <figure className="gallery-card mb-0">
                             <div className="gallery-img-wrap">
-                                <img src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعمل على تركيب سرير في المنزل" loading="eager" />
+                                <Image src="/images/real/assembly/bed-assembly.jpeg" alt="فني يعمل على تركيب سرير في المنزل" width={613} height={500} sizes="(max-width: 768px) 100vw, 25vw" />
                                 <span className="gallery-badge-overlay"><i className="fa-solid fa-screwdriver-wrench ml-1"></i> فك وتركيب</span>
                             </div>
                             <figcaption>
@@ -252,7 +253,7 @@ export default function Home() {
                         </span>
                         <h2 className="section-title">نغطي كافة محافظات ومناطق جمهورية مصر العربية</h2>
                         <p className="section-subtitle">
-                            جاهزون لخدمتك في جميع أحياء القاهرة والجيزة والمدن الجديدة، بالإضافة لرحلات النقل بين المحافظات.
+                            جاهزون لخدمتك في جميع أحياء القاهرة والجيزة وجميع المحافظات.
                         </p>
                     </div>
 
@@ -366,7 +367,7 @@ export default function Home() {
                             "addressRegion": "القاهرة الكبرى"
                         },
                         "priceRange": "$$",
-                        "description": `${BRAND_NAME} لخدمات نقل وتغليف الأثاث والعفش في القاهرة والجيزة.`
+                        "description": `${BRAND_NAME} لخدمات نقل وتغليف الأثاث والعفش في القاهرة والجيزة وجميع المحافظات.`
                     })
                 }}
             />

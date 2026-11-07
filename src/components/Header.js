@@ -65,7 +65,7 @@ export default function Header() {
                         <div className="topbar-contact-group">
                             <span className="topbar-item topbar-item--location d-none d-lg-inline-flex">
                                 <i className="fa-solid fa-location-dot"></i>
-                                <span>القاهرة والجيزة - مدينة نصر</span>
+                                <span>القاهرة والجيزة وجميع المحافظات</span>
                             </span>
                             <span className="topbar-sep d-none d-lg-inline">|</span>
                             <a href="mailto:egymove@gmail.com" className="topbar-item d-none d-md-inline-flex">
@@ -89,12 +89,6 @@ export default function Header() {
                             <div className="topbar-socials d-none d-sm-inline-flex">
                                 <a href="https://wa.me/201041924242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                     <i className="fa-brands fa-whatsapp"></i>
-                                </a>
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                    <i className="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                    <i className="fa-brands fa-instagram"></i>
                                 </a>
                             </div>
                             <span className="topbar-trust-badge">

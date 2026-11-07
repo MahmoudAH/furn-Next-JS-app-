@@ -1,12 +1,13 @@
+import Image from "next/image";
+
 export default function BrandLogo({ className }) {
     return (
-        <svg
+        <Image
+            src="/images/brand/egymove-master.svg"
             className={className}
-            viewBox="0 0 1157 464"
-            role="img"
-            aria-label="ايجي موف لنقل الأثاث"
-        >
-            <use href="/images/egy-move-horizontal.svg#logo" />
-        </svg>
+            width={1536}
+            height={1024}
+            alt="ايجي موف لنقل الأثاث - EgyMove"
+        />
     );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export default function HeroCarousel() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -10,7 +11,7 @@ export default function HeroCarousel() {
         {
             image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa-2.png",
             alt: "فريق نقل يرفع أريكة مغلفة إلى شقة",
-            badge: "خدمات نقل أثاث في القاهرة والجيزة",
+            badge: "خدمات نقل أثاث في القاهرة والجيزة وجميع المحافظات",
             title: "نقل وتغليف أثاث منزلك بعناية واحترافية",
             desc: "فريق متخصص لفك وتغليف وتحميل الأثاث، مع عناية بكل قطعة من بداية النقل حتى التركيب.",
             primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن نقل العفش",
@@ -70,11 +71,13 @@ export default function HeroCarousel() {
                                 className={`hero-slide-pane${isActive ? " is-active" : ""}`}
                                 aria-hidden={!isActive}
                             >
-                                <img
+                                <Image
                                     src={slide.image}
                                     alt={slide.alt}
                                     className="hero-slide-picture"
-                                    loading="eager"
+                                    fill
+                                    priority={index === 0}
+                                    sizes="100vw"
                                 />
 
                                 <div className="hero-slide-backdrop"></div>
@@ -86,11 +89,7 @@ export default function HeroCarousel() {
                                             <span>{slide.badge}</span>
                                         </span>
 
-                                        {index === 0 ? (
-                                            <h1 className="hero-headline">{slide.title}</h1>
-                                        ) : (
-                                            <h2 className="hero-headline">{slide.title}</h2>
-                                        )}
+                                        <h1 className="hero-headline">{slide.title}</h1>
 
                                         <p className="hero-subtext">{slide.desc}</p>
 
