@@ -1,118 +1,156 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export default function HeroCarousel() {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
     const slides = [
         {
-            image: "/images/hero-relocation.jpg",
-            alt: "نقل أثاث احترافي داخل مصر",
-            badge: "الدكتور",
-            title: "نقل وتغليف أثاث منزلي بأيدي فنيين محترفين",
-            desc: "نصل إليك بسرعة بفريق معتمد لفك وتغليف ونقل الأثاث مع ضمان كامل لكل قطعة حتى الاستلام.",
-            btnLink: "https://wa.me/201097060751",
-            btnText: "تواصل عبر واتساب",
-            btnClass: "btn btn-primary rounded-pill",
-            icon: "fa-solid fa-phone-volume",
-            phone: "01097060751",
-            tag: "نغطي مصر بالكامل - 01097060751"
+            image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa-2.png",
+            alt: "فريق نقل يرفع أريكة مغلفة إلى شقة",
+            badge: "خدمات نقل أثاث في القاهرة والجيزة وجميع المحافظات",
+            title: "نقل وتغليف أثاث منزلك بعناية واحترافية",
+            desc: "فريق متخصص لفك وتغليف وتحميل الأثاث، مع عناية بكل قطعة من بداية النقل حتى التركيب.",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن نقل العفش",
+            primaryText: "احجز زيارة مجانية الآن",
+            phone: "01041924242",
         },
         {
-            image: "/images/hero-packing.jpg",
-            alt: "تعبئة أثاث بعناية داخل المنزل",
-            badge: "حلول تغليف متكاملة",
-            title: "مواد تغليف متعددة الطبقات تحمي أثاثك من الخدوش",
-            desc: "نستخدم البطاطين السميكة، الفقاعات الهوائية، والصناديق المخصصة لضمان ثبات كل قطعة خلال عملية النقل.",
-            btnLink: "https://wa.me/201097060751",
-            btnText: "احجز فريق التغليف",
-            btnClass: "btn btn-outline-primary rounded-pill",
-            icon: "fa-solid fa-headset",
-            phone: "01202750832",
-            tag: "تأمين كامل أثناء التغليف"
+            image: "/images/Elevator%20Movers%20Deliver%20Wrapped%20Sofa.png",
+            alt: "فريق نقل يرفع أريكة مغلفة إلى شقة",
+            badge: "خامات تغليف عالية الجودة",
+            title: "تغليف احترافي متعدد الطبقات يحمي مقتنياتك من أي خدش",
+            desc: "كراتين مقواة، بابل راب هوائي، بطاطين مبطنة، وتغليف استريتش حراري لحماية الأجهزة والزجاج والأنتيكات.",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد الاستفسار عن خدمة التغليف",
+            primaryText: "اطلب باقة التغليف المتكاملة",
+            phone: "01041924242",
         },
         {
-            image: "/images/hero-logistics.jpg",
-            alt: "شاحنة نقل أثاث حديثة",
-            badge: "أسطول النقل الحديث",
-            title: "شاحنات مجهزة بالونش والربط الهيدروليكي الآمن",
-            desc: "أسطولنا مزود بأنظمة تتبع GPS وربط داخلي محكم يحافظ على الأثاث ثابتاً ويضمن وصوله بلا خدوش.",
-            btnLink: "https://wa.me/201097060751",
-            btnText: "احجز موعد النقل",
-            btnClass: "btn btn-primary rounded-pill",
-            icon: "fa-solid fa-truck-fast",
-            phone: "01097060751",
-            tag: "جاهزون لخدمتك طوال الأسبوع"
+            image: "/images/Professional%20Movers%20Packing%20a%20Bright%20Apartment-3.png",
+            alt: "فريق متخصص يغلّف الأثاث داخل الشقة",
+            badge: "شاحنات مجهزة لنقل آمن",
+            title: "أوناش هيدروليكية تصل للأدوار المرتفعة وسيارات نقل مغلقة",
+            desc: "شاحنات صندوقية مجهزة بالداخل ومبطنة لحماية العفش أثناء المطبات، مع أوناش هيدروليكية للأدوار العليا الضيقة.",
+            primaryLink: "https://wa.me/201041924242?text=مرحباً، أريد ونش رفع عفش",
+            primaryText: "احجز الونش الهيدروليكي",
+            phone: "01041924242",
         }
     ];
 
-    const nextSlide = () => {
-        setActiveIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    };
+    const nextSlide = useCallback(() => {
+        setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, [slides.length]);
 
-    const prevSlide = () => {
-        setActiveIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-    };
+    const prevSlide = useCallback(() => {
+        setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    }, [slides.length]);
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 5000);
+        if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const interval = setInterval(nextSlide, 6500);
         return () => clearInterval(interval);
-    }, []);
+    }, [isPaused, nextSlide]);
 
     return (
-        <div className="hero-slider">
-            <div id="mainCarousel" className="carousel slide">
-                <ol className="carousel-indicators">
-                    {slides.map((_, index) => (
-                        <li
-                            key={index}
-                            className={index === activeIndex ? "active" : ""}
-                            onClick={() => setActiveIndex(index)}
-                            style={{ cursor: "pointer" }}
-                        ></li>
-                    ))}
-                </ol>
-                <div className="carousel-inner">
-                    {slides.map((slide, index) => (
-                        <div
-                            key={index}
-                            className={`carousel-item ${index === activeIndex ? "active" : ""}`}
-                            style={{ display: index === activeIndex ? "block" : "none", width: "100%", transition: "transform 0.6s ease-in-out" }}
-                        >
-                            <img className="d-block w-100" src={slide.image} alt={slide.alt} />
-                            <div className="carousel-overlay">
-                                <div className="carousel-caption text-right">
-                                    <span className="carousel-badge">{slide.badge}</span>
-                                    {index === 0 ? (
-                                        <h1 className="hero-title" style={{ fontSize: "2.4rem", fontWeight: "700", marginBottom: "0.85rem" }}>{slide.title}</h1>
-                                    ) : (
-                                        <h2>{slide.title}</h2>
-                                    )}
-                                    <p>{slide.desc}</p>
-                                    <div className="carousel-actions">
-                                        <a href={slide.btnLink} target="_blank" rel="noopener noreferrer" className={slide.btnClass}>{slide.btnText}</a>
-                                        <div className="carousel-phone">
-                                            <i className={slide.icon}></i>
-                                            <span>{slide.phone}</span>
+        <section
+            className="hero-banner-section content-container"
+            aria-label="أبرز خدمات ايجي موف لنقل الأثاث"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+        >
+            <div className="hero-banner-card">
+                <div className="hero-slides-wrapper">
+                    {slides.map((slide, index) => {
+                        const isActive = index === activeIndex;
+                        return (
+                            <div
+                                key={index}
+                                className={`hero-slide-pane${isActive ? " is-active" : ""}`}
+                                aria-hidden={!isActive}
+                            >
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.alt}
+                                    className="hero-slide-picture"
+                                    fill
+                                    priority={index === 0}
+                                    sizes="100vw"
+                                />
+
+                                <div className="hero-slide-backdrop"></div>
+
+                                {isActive && (
+                                    <div className="hero-slide-caption">
+                                        <span className="hero-pill-tag">
+                                            <i className="fa-solid fa-award"></i>
+                                            <span>{slide.badge}</span>
+                                        </span>
+
+                                        <h1 className="hero-headline">{slide.title}</h1>
+
+                                        <p className="hero-subtext">{slide.desc}</p>
+
+                                        <div className="hero-cta-row">
+                                            <a
+                                                href={slide.primaryLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="btn btn-whatsapp hero-btn"
+                                            >
+                                                <i className="fa-brands fa-whatsapp"></i>
+                                                <span>{slide.primaryText}</span>
+                                            </a>
+                                            <a
+                                                href={`tel:${slide.phone}`}
+                                                className="btn hero-phone-cta"
+                                            >
+                                                <i className="fa-solid fa-phone-volume"></i>
+                                                <span>{slide.phone}</span>
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="carousel-tag">{slide.tag}</div>
+                                )}
                             </div>
-                        </div>
+                        );
+                    })}
+                </div>
+
+                {/* Left & Right Edge Arrows (matching reference https://a319.jood.online/ar) */}
+                <button
+                    type="button"
+                    className="hero-edge-arrow hero-edge-arrow--left"
+                    onClick={nextSlide}
+                    aria-label="الشريحة التالية"
+                >
+                    <i className="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                    type="button"
+                    className="hero-edge-arrow hero-edge-arrow--right"
+                    onClick={prevSlide}
+                    aria-label="الشريحة السابقة"
+                >
+                    <i className="fa-solid fa-chevron-right"></i>
+                </button>
+
+                {/* Bottom Pagination Dots */}
+                <div className="hero-pagination-dots" role="tablist">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            role="tab"
+                            aria-selected={index === activeIndex}
+                            aria-label={`الشريحة ${index + 1}`}
+                            className={`hero-pagi-dot${index === activeIndex ? " is-active" : ""}`}
+                            onClick={() => setActiveIndex(index)}
+                        ></button>
                     ))}
                 </div>
-                <a className="carousel-control-prev" href="#" role="button" onClick={(e) => { e.preventDefault(); prevSlide(); }}>
-                    <span className="carousel-control-prev-icon" aria-hidden="true" style={{ filter: "invert(1) grayscale(100) brightness(200%)" }}></span>
-                    <span className="sr-only">السابق</span>
-                </a>
-                <a className="carousel-control-next" href="#" role="button" onClick={(e) => { e.preventDefault(); nextSlide(); }}>
-                    <span className="carousel-control-next-icon" aria-hidden="true" style={{ filter: "invert(1) grayscale(100) brightness(200%)" }}></span>
-                    <span className="sr-only">التالي</span>
-                </a>
             </div>
-        </div>
+        </section>
     );
 }

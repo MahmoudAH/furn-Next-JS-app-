@@ -1,82 +1,114 @@
-export const metadata = {
-    title: 'من نحن',
-};
+import Link from 'next/link';
+import PageBanner from '../../components/PageBanner';
+import { BRAND_NAME, createPageMetadata } from '../../lib/site';
+
+export const metadata = createPageMetadata({
+    title: "من نحن",
+    description: `تعرف على ${BRAND_NAME} وخدمات نقل الأثاث والعفش، التغليف، والفك والتركيب في القاهرة والجيزة وجميع المحافظات.`,
+    path: "/about",
+    imageAlt: "فريق نقل أثاث يعمل بعناية",
+});
 
 export default function About() {
     return (
-        <div className="container">
-            <section className="surface-card mb-5">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <span className="tag-pill mb-3"><i className="fa-solid fa-people-carry-box"></i><span>قصتنا في مصر</span></span>
-                        <h1 className="section-title" style={{ fontSize: "2.2rem" }}>المارد لنقل الأثاث… شريكك في النقل الآمن منذ 2003</h1>
-                        <p className="lead-text" style={{ fontSize: "1.05rem" }}>بدأنا في القاهرة بفريق صغير وشاحنة واحدة، واليوم نخدم محافظات مصر كافة بأسطول مجهز وفنيين متخصصين في فك وتركيب الأثاث المنزلي والمكتبي.</p>
-                        <p>خبرتنا تمتد لعشرين عاماً مع آلاف العمليات الناجحة، من النقل الداخلي داخل القاهرة وحتى الرحلات الطويلة إلى الساحل الشمالي، الصعيد، ومدن القناة. نؤمن أن النقل المريح يبدأ بالتخطيط الجيد، لذلك نوفّر معاينة مجانية، خطة عمل مكتوبة، وجدولاً واضحاً للعميل خطوة بخطوة.</p>
-                        <div className="metrics-wrap" style={{ marginTop: "1.75rem" }}>
-                            <div className="metric">
-                                <strong>+7500</strong>
-                                <span>عملية نقل منزل وشركة مكتملة</span>
-                            </div>
-                            <div className="metric">
-                                <strong>120</strong>
-                                <span>فني نقل وتغليف ونجارة داخل الفريق</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <img src="/images/WhatsApp Image 2020-09-07 at 11.13.40 PM (2) (1).jpg" alt="فريق المارد أثناء النقل" className="img-fluid" style={{ borderRadius: "24px", boxShadow: "var(--shadow-soft)", objectFit: "cover", width: "100%", height: "420px" }} />
-                    </div>
-                </div>
-            </section>
+        <>
+            {/* Consistent Internal Page Banner */}
+            <PageBanner
+                tag="خدمات نقل الأثاث في القاهرة والجيزة وجميع المحافظات"
+                title={`من نحن - ${BRAND_NAME} لنقل الأثاث`}
+                subtitle={`${BRAND_NAME} تساعد الأسر والشركات على تخطيط نقل الأثاث والعفش بعناية في القاهرة والجيزة وجميع المحافظات.`}
+                breadcrumb="من نحن"
+                image="/images/real/fleet/moving-trucks.jpeg"
+            />
 
-            <section className="section pt-0">
-                <div className="row">
-                    <div className="col-lg-4 mb-4">
-                        <div className="surface-card h-100" style={{ padding: "2rem" }}>
-                            <span className="tag-pill mb-3"><i className="fa-solid fa-truck"></i><span>أسطولنا</span></span>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>سيارات نقل مغلقة ومجهزة</h3>
-                            <p>أسطول سيارات مغلقة متعددة الأحجام، مزودة بالرافعات، الأشرطة المطاطية، وأرضيات مبطنة لحماية العفش أثناء الرحلات الطويلة داخل مصر.</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="surface-card h-100" style={{ padding: "2rem" }}>
-                            <span className="tag-pill mb-3"><i className="fa-solid fa-user-shield"></i><span>الفريق</span></span>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>خبراء فك وتركيب وتغليف</h3>
-                            <p>نخبة من الفنيين والنجارين المختصين في غرف النوم، المطابخ، الأنتيكات، والأجهزة الحساسة بملابس موحدة ومعايير سلامة مشددة.</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="surface-card h-100" style={{ padding: "2rem" }}>
-                            <span className="tag-pill mb-3"><i className="fa-solid fa-shield-heart"></i><span>الضمان</span></span>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>تأمين شامل على العفش</h3>
-                            <p>تغطية تأمينية فورية على الأثاث المنزلي والشركات ضد الكسر والخدوش، مع تعويض فوري في حال حدوث أي ضرر لا قدر الله.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section pt-0">
-                <div className="surface-card">
+            <div className="content-container section pt-0">
+                {/* Story Hero Surface */}
+                <section className="surface-card mb-5">
                     <div className="row align-items-center">
-                        <div className="col-lg-7 mb-4 mb-lg-0">
-                            <h2 className="section-title" style={{ fontSize: "1.9rem" }}>قيمنا ترشد كل رحلة نقل</h2>
-                            <ul className="list-unstyled" style={{ marginTop: "1.5rem", color: "var(--neutral-700)" }}>
-                                <li className="mb-3"><i className="fa-solid fa-check-circle text-primary ml-2"></i> الالتزام بالمواعيد: جداول زمنية دقيقة مع متابعة بالهاتف أو الواتساب قبل الوصول.</li>
-                                <li className="mb-3"><i className="fa-solid fa-check-circle text-primary ml-2"></i> الشفافية: عرض سعر موثق يشمل التغليف، النقل، التركيب، وأي خدمات إضافية دون مصاريف مفاجئة.</li>
-                                <li className="mb-3"><i className="fa-solid fa-check-circle text-primary ml-2"></i> السلامة أولاً: معدات حماية شخصية، تغليف مرقم، وتثبيت آمن داخل السيارات.</li>
-                                <li className="mb-3"><i className="fa-solid fa-check-circle text-primary ml-2"></i> دعم ما بعد النقل: فريق صيانة لإصلاح أي قطعة، وخدمة تنظيف خفيفة للمنزل بعد التفريغ عند الطلب.</li>
-                            </ul>
+                        <div className="col-lg-6 mb-4 mb-lg-0">
+                            <span className="tag-pill mb-3">
+                                <i className="fa-solid fa-medal"></i>
+                                <span>ريادة وأمان</span>
+                            </span>
+                            <h2 className="section-title">
+                                شريكك الموثوق في كل خطوة لنقل مقتنياتك
+                            </h2>
+                            <p className="lead-text">
+                                تقدم {BRAND_NAME} خدمات نقل الأثاث والعفش للأسر والشركات، مع إمكانية تنسيق التغليف والفك والتركيب وفق احتياجات كل عملية.
+                            </p>
+                            <p style={{ color: "var(--clr-neutral-700)" }}>
+                                تبدأ خطواتنا بفهم تفاصيل الموقع والمنقولات، ثم تحديد الخدمات ووسيلة النقل المناسبة، مع توضيح نطاق العمل قبل يوم الانتقال.
+                            </p>
+                            
                         </div>
-                        <div className="col-lg-5">
-                            <div className="surface-card" style={{ padding: "1.75rem", background: "rgba(243,162,97,0.08)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "1rem" }}>رسالتنا</h4>
-                                <p style={{ marginBottom: "1.5rem" }}>أن يشعر كل عميل بالاطمئنان من لحظة التواصل وحتى إعادة ترتيب آخر قطعة في منزله أو مكتبه، مع فريق يراعي التفاصيل الصغيرة قبل الكبيرة.</p>
-                                <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill">تحدث مع خدمة العملاء</a>
+
+                        <div className="col-lg-6">
+                            <img 
+                                src="/images/real/packing/wrapped-sofas.jpeg"
+                                alt="فريق متخصص يحمل كنبة مغلفة بعناية إلى المنزل الجديد"
+                                className="img-fluid" 
+                                style={{ 
+                                    borderRadius: "var(--r-xl)", 
+                                    boxShadow: "var(--shadow-lg)", 
+                                    objectFit: "cover", 
+                                    width: "100%", 
+                                    height: "420px" 
+                                }} 
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Core Capabilities */}
+                <section className="section pt-0">
+                    <div className="row g-4">
+                        <div className="col-lg-4">
+                            <div className="surface-card h-100" style={{ padding: "2rem" }}>
+                                <span className="tag-pill mb-3">
+                                    <i className="fa-solid fa-truck"></i>
+                                    <span>الأسطول المجهز</span>
+                                </span>
+                                <h3 className="about-card-title">
+                                    شاحنات صندوقية مغلقة ومبطنة
+                                </h3>
+                                <p className="text-muted mb-0">
+                                    أسطول مخصص لنقل الأثاث مزود بأحزمة أمان داخلية وأرضيات مبطنة لامتصاص الصدمات أثناء السير في الطرقات وحماية العفش من الأمطار والأتربة.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4">
+                            <div className="surface-card h-100" style={{ padding: "2rem" }}>
+                                <span className="tag-pill mb-3">
+                                    <i className="fa-solid fa-user-shield"></i>
+                                    <span>فريق العمل</span>
+                                </span>
+                                <h3 className="about-card-title">
+                                    نجارون وفنيون متخصصون
+                                </h3>
+                                <p className="text-muted mb-0">
+                                    فنيون مدربون على تفكيك وإعادة تجميع غرف النوم الحديثة والمودرن والإيطالي والمطابخ دون خدش واحد، مع التعامل المحترف مع الأجهزة الكهربائية.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4">
+                            <div className="surface-card h-100" style={{ padding: "2rem" }}>
+                                <span className="tag-pill mb-3">
+                                    <i className="fa-solid fa-shield-heart"></i>
+                                    <span>وضوح الخدمة</span>
+                                </span>
+                                <h3 className="about-card-title">
+                                    تفاصيل واضحة قبل التنفيذ
+                                </h3>
+                                <p className="text-muted mb-0">
+                                    نوضح الخدمات المتفق عليها وتفاصيل التعامل مع الأثاث قبل بدء النقل، ويمكنك الاستفسار عن أي متطلبات خاصة أثناء طلب المعاينة.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </>
     );
 }

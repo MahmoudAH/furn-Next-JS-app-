@@ -1,79 +1,130 @@
-export const metadata = {
-    title: 'حلول الشركات والمشروعات',
-};
+import Link from 'next/link';
+import PageBanner from '../../../components/PageBanner';
+import { BRAND_NAME, createPageMetadata } from '../../../lib/site';
+
+export const metadata = createPageMetadata({
+    title: "حلول الشركات والمكاتب",
+    description: 'نقل مقرات الشركات، المكاتب الإدارية، المعارض التجارية، وغرف السيرفرات باحترافية عالية وجداول زمنية مرنة تقلل فترات التوقف.',
+    path: "/services/business-relocation",
+    image: "/images/real/fleet/moving-trucks.jpeg",
+    imageAlt: "سيارات مجهزة لنقل الأثاث والمكاتب",
+});
 
 export default function BusinessRelocationService() {
     return (
-        <div className="container">
-            <section className="surface-card mb-5">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <span className="tag-pill mb-3"><i className="fa-solid fa-building"></i><span>خدمة الشركات</span></span>
-                        <h1 className="section-title" style={{ fontSize: "2rem" }}>نقل مكاتب، معارض، ومشروعات تجارية بأعلى معايير السلامة</h1>
-                        <p className="lead-text" style={{ fontSize: "1.05rem" }}>ندير عمليات النقل للمؤسسات داخل مصر بما يشمل الأثاث المكتبي، مراكز البيانات، المعارض التجارية، والفنادق مع خطط تنفيذ على مراحل.</p>
-                        <ul className="list-unstyled mt-4" style={{ color: "var(--neutral-700)" }}>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> مدير مشروع متخصص يتابع جميع الفرق الفنية وأوقات التوقف.</li>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> حلول تغليف مخصصة للأجهزة الحساسة وخطوط الإنتاج.</li>
-                            <li className="mb-3"><i className="fa-solid fa-check text-primary ml-2"></i> إمكانية العمل ليلاً أو في عطلات نهاية الأسبوع لتقليل أثر التوقف.</li>
-                        </ul>
-                        <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill">ترتيب اجتماع تعريفي</a>
-                    </div>
-                    <div className="col-lg-6">
-                        <img src="/images/taa.jpg" alt="نقل مشروعات تجارية" className="img-fluid" style={{ borderRadius: "24px", height: "420px", width: "100%", objectFit: "cover", boxShadow: "var(--shadow-soft)" }} />
-                    </div>
-                </div>
-            </section>
+        <>
+            <PageBanner
+                tag="حلول متخصصة لقطاع الأعمال"
+                title="خدمة نقل مقرات الشركات والمكاتب"
+                subtitle="خطط تنفيذ مرنة أثناء عطلات نهاية الأسبوع أو المساء لضمان استمرارية أعمالكم دون أي تعطل."
+                breadcrumb="حلول الشركات والمكاتب"
+                image="/images/real/fleet/moving-trucks.jpeg"
+            />
 
-            <section className="section pt-0">
-                <div className="surface-card">
-                    <h2 className="section-title" style={{ fontSize: "1.8rem" }}>مجالات نخدمها</h2>
-                    <div className="row mt-4 g-4">
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(159,107,63,0.08)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>المكاتب والشركات</h4>
-                                <p>تخطيط مسبق لانتقال الأقسام، تفكيك وحدات العمل، وتركيب الشبكات الكهربائية والبيانات في الوجهة الجديدة.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(243,162,97,0.09)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>الفنادق والمعارض</h4>
-                                <p>تعامل خاص مع الأثاث الفاخر والتحف، وتنسيق مع فرق التصميم الداخلي لضمان فتح الموقع في الموعد.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="surface-card h-100" style={{ padding: "1.75rem", background: "rgba(31,41,51,0.05)" }}>
-                                <h4 style={{ fontWeight: 700, marginBottom: "0.75rem" }}>المعامل الطبية</h4>
-                                <p>تغليف وعزل للأجهزة الحساسة مع ضبط درجات الحرارة داخل السيارات وفرق متخصصة في عمليات التحميل.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section pt-0">
-                <div className="row">
-                    <div className="col-lg-6 mb-4 mb-lg-0">
-                        <div className="surface-card h-100" style={{ padding: "2rem" }}>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>ما الذي نقدمه للشركات؟</h3>
-                            <ul className="list-unstyled" style={{ color: "var(--neutral-700)" }}>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> تقرير جدولة تفصيلي يحدد المسؤوليات ومراحل العمل.</li>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> فريق IT لنقل الأجهزة الخادمة، السيرفرات، ومراكز النسخ الاحتياطي.</li>
-                                <li className="mb-3"><i className="fa-solid fa-circle-check text-primary ml-2"></i> تخزين مؤقت آمن لأي مخزون أو أجهزة إضافية طوال فترة الانتقال.</li>
+            <div className="content-container section pt-0">
+                {/* Service Hero */}
+                <section className="surface-card mb-5">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 mb-4 mb-lg-0">
+                            <span className="tag-pill mb-3">
+                                <i className="fa-solid fa-building"></i>
+                                <span>حلول الشركات والمشروعات</span>
+                            </span>
+                            <h2 className="section-title">
+                                نقل مقرات الشركات والمكاتب دون تعطيل سير العمل
+                            </h2>
+                            <p className="lead-text">
+                                تدرك {BRAND_NAME} أهمية تقليل توقف العمل أثناء الانتقال؛ لذلك ننسق تفاصيل نقل المكاتب مع فريقك ونحدد خطة مناسبة لطبيعة الموقع والجدول المتاح.
+                            </p>
+                            <ul className="list-unstyled mt-4" style={{ color: "var(--clr-neutral-700)" }}>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>مدير مشروع مخصص ينسق عملية النقل من البداية حتى التسليم.</span>
+                                </li>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>تغليف خاص ومؤمن للشاشات وأجهزة الحاسوب وغرف السيرفرات.</span>
+                                </li>
+                                <li className="mb-3 d-flex align-items-center gap-2">
+                                    <i className="fa-solid fa-circle-check text-primary"></i>
+                                    <span>إعادة تجميع محطات العمل (Workstations) وترتيب الملفات بالأرقام.</span>
+                                </li>
                             </ul>
+                            <div className="service-actions">
+                                <a href="https://wa.me/201041924242?text=مرحباً، أود التنسيق لنقل مقر شركة" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                                    <i className="fa-brands fa-whatsapp ml-1"></i>
+                                    <span>طلب عرض سعر للشركات</span>
+                                </a>
+                                <a href="tel:01041924242" className="btn btn-primary">
+                                    <i className="fa-solid fa-phone ml-1"></i>
+                                    <span>01041924242</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <img 
+                                src="/images/real/hoist/truck-lift-wide.jpeg"
+                                alt="ونش رفع الأثاث ضمن تجهيزات عملية الانتقال"
+                                className="img-fluid" 
+                                style={{ 
+                                    borderRadius: "var(--r-xl)", 
+                                    height: "400px", 
+                                    width: "100%", 
+                                    objectFit: "cover", 
+                                    boxShadow: "var(--shadow-lg)" 
+                                }} 
+                            />
                         </div>
                     </div>
-                    <div className="col-lg-6">
-                        <div className="surface-card" style={{ padding: "2rem", background: "rgba(243,162,97,0.08)" }}>
-                            <h3 style={{ fontWeight: 700, marginBottom: "1rem" }}>آلية التعاقد</h3>
-                            <p>نبدأ بدراسة احتياجات المشروع، ثم نقدم عرضاً فنياً ومالياً مفصلاً، يلي ذلك جدولة التنفيذ وتحديد نقطة اتصال واحدة مع الفريق.</p>
-                            <div className="d-flex flex-column" style={{ gap: "0.5rem" }}>
-                                <a href="https://wa.me/201097060751" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-pill">تواصل مباشر عبر واتساب</a>
-                                <a href="tel:01202750832" className="btn btn-primary rounded-pill">اتصل بمدير المشاريع 01202750832</a>
+                </section>
+
+                {/* Corporate Sectors */}
+                <section className="section pt-0">
+                    <div className="section-header">
+                        <span className="tag-pill">
+                            <i className="fa-solid fa-briefcase"></i>
+                            <span>قطاعات نخدمها</span>
+                        </span>
+                        <h2 className="section-title">مجالات التخصص لقطاع الأعمال</h2>
+                        <p className="section-subtitle">
+                            حلول لوجستية مصممة خصيصاً للشركات والمؤسسات والعيادات والمعارض.
+                        </p>
+                    </div>
+
+                    <div className="row g-4">
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-building-columns"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">المقرات الإدارية والشركات</h3>
+                                <p className="text-muted mb-0">نقل مكاتب المديرين، غرف الاجتماعات، وحدات عمل الموظفين، وأرشيف الملفات مع توثيق ترقيم الصناديق.</p>
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-hotel"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">الفنادق والقرى السياحية</h3>
+                                <p className="text-muted mb-0">نقل وتفريغ وتوزيع أثاث الغرف الفندقية والمطاعم والتجهيزات مع الالتزام التام بالجداول الزمنية للافتتاح.</p>
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+                            <div className="surface-card h-100" style={{ padding: "1.75rem" }}>
+                                <span className="icon-circle">
+                                    <i className="fa-solid fa-server"></i>
+                                </span>
+                                <h3 className="h5 fw-bold mb-2">الأجهزة والعيادات الطبية</h3>
+                                <p className="text-muted mb-0">تغليف مضاد للصدمات والاهتزاز للأجهزة الطبية ومعامل التحاليل وفرق عمل مدربة على التعامل بحرص شديد.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </>
     );
 }

@@ -1,1 +1,1 @@
-This SVG logo is a sample for the brand "الدكتور". It uses a modern blue background, bold Arabic text, and a simple icon for a professional look. You can edit or replace it as needed.
+The Egy Move website header and footer use /images/egy-move-horizontal.jpg. The favicon uses /images/egy-move-brand.jpg, the square version of the Arabic wordmark and moving-services emblem.
