@@ -1,4 +1,4 @@
-export const SITE_URL = "https://furniture-moving-eg.com";
+export const SITE_URL = "https://egymoveexpress.com";
 export const BRAND_NAME = "ايجي موف";
 export const BRAND_NAME_EN = "Egy Move";
 
